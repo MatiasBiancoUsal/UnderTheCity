@@ -40,11 +40,18 @@ public class VagabundoControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        enSuelo = true;
+        // SOLO detecta el piso
+        if (collision.gameObject.CompareTag("Piso"))
+        {
+            enSuelo = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        enSuelo = false;
+        if (collision.gameObject.CompareTag("Piso"))
+        {
+            enSuelo = false;
+        }
     }
 }

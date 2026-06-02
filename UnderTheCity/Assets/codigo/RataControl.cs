@@ -19,6 +19,7 @@ public class RataControl : MonoBehaviour
     {
         float movimiento = 0f;
 
+        // Movimiento con flechas ← →
         if (Keyboard.current.leftArrowKey.isPressed)
         {
             movimiento = -1f;
@@ -30,6 +31,7 @@ public class RataControl : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
 
+        // Salto con flecha ↑
         if (Keyboard.current.upArrowKey.wasPressedThisFrame && enSuelo)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
@@ -38,11 +40,18 @@ public class RataControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        enSuelo = true;
+        // SOLO detecta el piso
+        if (collision.gameObject.CompareTag("Piso"))
+        {
+            enSuelo = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        enSuelo = false;
+        if (collision.gameObject.CompareTag("Piso"))
+        {
+            enSuelo = false;
+        }
     }
 }
