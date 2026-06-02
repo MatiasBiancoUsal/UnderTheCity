@@ -40,17 +40,11 @@ public class VagabundoControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Piso")
-        {
-            enSuelo = true;
-        }
+        enSuelo = true;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Piso")
-        {
-            enSuelo = false;
-        }
+        enSuelo = false;
     }
 }
