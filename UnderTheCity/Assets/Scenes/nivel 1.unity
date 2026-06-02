@@ -489,10 +489,10 @@ GameObject:
   - component: {fileID: 2062050468}
   - component: {fileID: 2062050467}
   - component: {fileID: 2062050469}
-  - component: {fileID: 2062050471}
   - component: {fileID: 2062050470}
+  - component: {fileID: 2062050471}
   m_Layer: 0
-  m_Name: PJ
+  m_Name: Vagabundo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
