@@ -7,4 +7,20 @@ public class MenuPrincipal : MonoBehaviour
     {
         SceneManager.LoadScene("nivel 1");
     }
+
+    public void VolverAlMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void Controles()
+    {
+        SceneManager.LoadScene("Controles");
+    }
+
+    public void Salir()
+    {
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
+    }
 }

@@ -19,7 +19,6 @@ public class VagabundoControl : MonoBehaviour
     {
         float movimiento = 0f;
 
-        // Movimiento A / D
         if (Keyboard.current.aKey.isPressed)
         {
             movimiento = -1f;
@@ -31,7 +30,6 @@ public class VagabundoControl : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
 
-        // Salto con W
         if (Keyboard.current.wKey.wasPressedThisFrame && enSuelo)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
@@ -40,7 +38,6 @@ public class VagabundoControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // SOLO detecta el piso
         if (collision.gameObject.CompareTag("Piso"))
         {
             enSuelo = true;
