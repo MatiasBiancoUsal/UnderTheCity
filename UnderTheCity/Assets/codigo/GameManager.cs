@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour
 
     bool yaCargo = false;
 
+    
+    public int cervezas = 0;
+    public int quesos = 0;
+
+    public int cervezasNecesarias = 3;
+    public int quesosNecesarios = 3;
+
     void Awake()
     {
         instancia = this;
@@ -20,13 +27,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
             int indiceActual = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(indiceActual);
         }
 
-        if (!yaCargo && vagabundoListo && rataLista)
+        
+        bool vagabundoCompleto = cervezas >= cervezasNecesarias;
+        bool rataCompleta = quesos >= quesosNecesarios;
+
+        if (!yaCargo && vagabundoListo && rataLista && vagabundoCompleto && rataCompleta)
         {
             yaCargo = true;
             SceneManager.LoadScene(siguienteNivel);
