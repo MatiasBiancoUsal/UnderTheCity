@@ -26,12 +26,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(indiceActual);
         }
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            Debug.Log("Saliendo del juego...");
-            Application.Quit();
-        }
-
         if (!yaCargo && vagabundoListo && rataLista)
         {
             yaCargo = true;
