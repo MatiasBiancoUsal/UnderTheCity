@@ -5,6 +5,11 @@ public class MenuPrincipal : MonoBehaviour
 {
     public void Jugar()
     {
+        SceneManager.LoadScene("Niveles");
+    }
+
+    public void Nivel1()
+    {
         SceneManager.LoadScene("nivel 1");
     }
 
@@ -23,4 +28,5 @@ public class MenuPrincipal : MonoBehaviour
         Debug.Log("Saliendo del juego...");
         Application.Quit();
     }
+
 }
