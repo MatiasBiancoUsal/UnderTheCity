@@ -9,10 +9,14 @@ public class VagabundoControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool enSuelo;
+    private Animator anim;
+
+    private float escala = 0.349641f; 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -30,6 +34,20 @@ public class VagabundoControl : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
 
+        anim.SetFloat("velocidad", Mathf.Abs(movimiento));
+
+        Transform sprite = anim.transform;
+
+        if (movimiento != 0)
+        {
+            sprite.localScale = new Vector3(
+                movimiento > 0 ? escala : -escala,
+                escala,
+                1f
+            );
+        }
+
+        // Salto
         if (Keyboard.current.wKey.wasPressedThisFrame && enSuelo)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
