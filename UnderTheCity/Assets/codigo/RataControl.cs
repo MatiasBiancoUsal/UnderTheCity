@@ -9,10 +9,15 @@ public class RataControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool enSuelo;
+    private Animator anim;
+
+    private float escalaX = 0.07186557f;
+    private float escalaY = 0.08849049f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
@@ -29,6 +34,24 @@ public class RataControl : MonoBehaviour
         }
 
         rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
+
+        if (anim != null)
+        {
+            anim.SetFloat("velocidad", Mathf.Abs(movimiento));
+
+            anim.SetBool("isJumping", !enSuelo);
+        }
+
+        Transform sprite = anim != null ? anim.transform : transform;
+
+        if (movimiento != 0)
+        {
+            sprite.localScale = new Vector3(
+                movimiento > 0 ? escalaX : -escalaX,
+                escalaY,
+                1f
+            );
+        }
 
         if (Keyboard.current.upArrowKey.wasPressedThisFrame && enSuelo)
         {
