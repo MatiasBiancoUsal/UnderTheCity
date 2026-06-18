@@ -6,12 +6,13 @@ public class VagabundoControl : MonoBehaviour
 {
     public float velocidad = 5f;
     public float fuerzaSalto = 7f;
+    public float velocidadExtra = 3f;
 
     private Rigidbody2D rb;
     private bool enSuelo;
     private Animator anim;
 
-    private float escala = 0.349641f; 
+    private float escala = 0.349641f;
 
     void Start()
     {
@@ -47,7 +48,6 @@ public class VagabundoControl : MonoBehaviour
             );
         }
 
-        // Salto
         if (Keyboard.current.wKey.wasPressedThisFrame && enSuelo)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
@@ -68,5 +68,20 @@ public class VagabundoControl : MonoBehaviour
         {
             enSuelo = false;
         }
+    }
+
+    public void ActivarVelocidadTemporal()
+    {
+        StopAllCoroutines();
+        StartCoroutine(VelocidadTemporal());
+    }
+
+    private System.Collections.IEnumerator VelocidadTemporal()
+    {
+        velocidad += velocidadExtra;
+
+        yield return new WaitForSeconds(5f);
+
+        velocidad -= velocidadExtra;
     }
 }
