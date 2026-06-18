@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 74daf05b1d7a16846973db4351252512
+guid: 199bf5b361543144991e6af2e7abb4ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -837357138473557450
-    second: Idle Vagabundo-01_0
+      213: -5066545122537163038
+    second: ratacaminata3 copy-04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Vagabundo-01_0
+      name: ratacaminata3 copy-04_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 21
-        width: 271
-        height: 615
+        x: 759
+        y: 579
+        width: 2800
+        height: 902
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 632652b7e1c1164f0800000000000000
-      internalID: -837357138473557450
+      spriteID: 2e63fa40e0400b9b0800000000000000
+      internalID: -5066545122537163038
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle Vagabundo-01_0: -837357138473557450
+      ratacaminata3 copy-04_0: -5066545122537163038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

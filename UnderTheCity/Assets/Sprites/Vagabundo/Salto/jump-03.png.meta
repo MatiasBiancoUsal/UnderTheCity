@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d4e68b81e35f394fb7e9eb55cd1e0e2
+guid: 33a4953feccac9f42bca3c59e0f28055
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3877896789889035008
-    second: Idle Vagabundo-03_0
+      213: 6824937269360707914
+    second: jump-03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle Vagabundo-03_0
+      name: jump-03_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 24
-        width: 270
-        height: 610
+        x: 46
+        y: 34
+        width: 277
+        height: 608
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00ba6fc959e01d530800000000000000
-      internalID: 3877896789889035008
+      spriteID: a49c192594c07be50800000000000000
+      internalID: 6824937269360707914
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Idle Vagabundo-03_0: 3877896789889035008
+      jump-03_0: 6824937269360707914
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

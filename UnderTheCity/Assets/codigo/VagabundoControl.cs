@@ -33,11 +33,19 @@ public class VagabundoControl : MonoBehaviour
             movimiento = 1f;
         }
 
-        rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(
+            movimiento * velocidad,
+            rb.linearVelocity.y
+        );
 
-        anim.SetFloat("velocidad", Mathf.Abs(movimiento));
+        if (anim != null)
+        {
+            anim.SetFloat("velocidad", Mathf.Abs(movimiento));
 
-        Transform sprite = anim.transform;
+            anim.SetBool("isJumping", !enSuelo);
+        }
+
+        Transform sprite = anim != null ? anim.transform : transform;
 
         if (movimiento != 0)
         {
@@ -50,7 +58,10 @@ public class VagabundoControl : MonoBehaviour
 
         if (Keyboard.current.wKey.wasPressedThisFrame && enSuelo)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                fuerzaSalto
+            );
         }
     }
 

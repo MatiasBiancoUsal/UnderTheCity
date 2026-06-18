@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: nivel 2
   cervezas: 0
   quesos: 0
   cervezasNecesarias: 3
@@ -4803,7 +4803,7 @@ SpriteRenderer:
   m_Size: {x: 2.71, y: 6.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1398685517
 GameObject:
@@ -7501,6 +7501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   velocidad: 5
   fuerzaSalto: 7
+  velocidadExtra: 3
 --- !u!61 &2062050470
 BoxCollider2D:
   m_ObjectHideFlags: 0
