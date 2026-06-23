@@ -106,12 +106,12 @@ TextureImporter:
       name: Palancas_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 175
+        x: 57
+        y: 177
         width: 148
-        height: 161
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: Palancas_1
       rect:
         serializedVersion: 2
-        x: 306
-        y: 175
-        width: 133
-        height: 161
+        x: 308
+        y: 177
+        width: 148
+        height: 158
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 05207c2ce65f5304e97b7c0770c9a54b
     internalID: 0
     vertices: []
     indices: 
