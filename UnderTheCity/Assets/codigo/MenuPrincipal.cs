@@ -13,6 +13,11 @@ public class MenuPrincipal : MonoBehaviour
         SceneManager.LoadScene("nivel 1");
     }
 
+    public void Nivel2()
+    {
+        SceneManager.LoadScene("nivel 2");
+    }
+
     public void VolverAlMenu()
     {
         SceneManager.LoadScene("Menu");

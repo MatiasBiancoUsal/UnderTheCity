@@ -20,10 +20,8 @@ public class GameManager : MonoBehaviour
     public int cervezasNecesarias = 3;
     public int quesosNecesarios = 3;
 
-    // TEMPORIZADOR
     public float tiempoTranscurrido = 0f;
 
-    // Texto del temporizador
     public TMP_Text textoTiempo;
 
     void Awake()
@@ -33,16 +31,13 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        // Cronómetro
         tiempoTranscurrido += Time.deltaTime;
 
-        // Actualizar texto en pantalla
         if (textoTiempo != null)
         {
             textoTiempo.text = "Tiempo: " + tiempoTranscurrido.ToString("F2") + " s";
         }
 
-        // Reiniciar nivel con R
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
             int indiceActual = SceneManager.GetActiveScene().buildIndex;
@@ -57,6 +52,11 @@ public class GameManager : MonoBehaviour
             yaCargo = true;
 
             Debug.Log("Tiempo completado: " + tiempoTranscurrido.ToString("F2") + " segundos");
+
+            // ✅ Guardar progreso antes de cambiar de escena
+            int nivelActual = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("NivelDesbloqueado", Mathf.Max(PlayerPrefs.GetInt("NivelDesbloqueado", 1), nivelActual + 1));
+            PlayerPrefs.Save();
 
             SceneManager.LoadScene(siguienteNivel);
         }
