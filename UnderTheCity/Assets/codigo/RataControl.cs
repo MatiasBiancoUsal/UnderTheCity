@@ -7,11 +7,15 @@ public class RataControl : MonoBehaviour
     public float velocidad = 5f;
     public float fuerzaSalto = 7f;
 
+    [Header("Sonidos")]
+    public AudioClip sonidoSalto;
+
     private Rigidbody2D rb;
     private bool enSuelo;
     private bool empujandoCaja;
 
     private Animator anim;
+    private AudioSource audioSource;
 
     private float escalaX = 0.07186557f;
     private float escalaY = 0.08849049f;
@@ -20,6 +24,7 @@ public class RataControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -59,6 +64,11 @@ public class RataControl : MonoBehaviour
         if (Keyboard.current.upArrowKey.wasPressedThisFrame && enSuelo)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+
+            if (audioSource != null && sonidoSalto != null)
+            {
+                audioSource.PlayOneShot(sonidoSalto);
+            }
         }
     }
 

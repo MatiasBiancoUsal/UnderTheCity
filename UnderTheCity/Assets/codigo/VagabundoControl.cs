@@ -9,6 +9,10 @@ public class VagabundoControl : MonoBehaviour
     public float fuerzaSalto = 7f;
     public float velocidadExtra = 3f;
 
+    [Header("Sonidos")]
+    public AudioClip sonidoSalto;
+    public AudioClip sonidoLata;
+
     [Header("Detección de empuje (Raycast)")]
     public LayerMask layerCaja;
     public float distanciaRaycast = 0.3f;
@@ -17,6 +21,7 @@ public class VagabundoControl : MonoBehaviour
     private Rigidbody2D rb;
     private bool enSuelo;
     private Animator anim;
+    private AudioSource audioSource;
 
     private float escala = 0.349641f;
     private float direccionMirando = 1f;
@@ -27,6 +32,7 @@ public class VagabundoControl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -84,6 +90,11 @@ public class VagabundoControl : MonoBehaviour
                 rb.linearVelocity.x,
                 fuerzaSalto
             );
+
+            if (audioSource != null && sonidoSalto != null)
+            {
+                audioSource.PlayOneShot(sonidoSalto);
+            }
         }
     }
 
@@ -130,6 +141,11 @@ public class VagabundoControl : MonoBehaviour
         if (anim != null)
         {
             anim.SetTrigger("BeberLata");
+        }
+
+        if (audioSource != null && sonidoLata != null)
+        {
+            audioSource.PlayOneShot(sonidoLata);
         }
 
         yield return new WaitForSeconds(1f);
