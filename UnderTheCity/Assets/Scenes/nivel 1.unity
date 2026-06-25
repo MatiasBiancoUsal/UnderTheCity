@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 281012577}
   - component: {fileID: 281012581}
   m_Layer: 8
-  m_Name: Square
+  m_Name: 'Caja '
   m_TagString: Piso
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6451,7 +6451,7 @@ Transform:
   m_GameObject: {fileID: 1877539643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.62621, y: 3.7096996, z: 2.89111}
+  m_LocalPosition: {x: 38.62621, y: 3.84, z: 2.89111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7546,6 +7546,11 @@ MonoBehaviour:
   velocidad: 5
   fuerzaSalto: 7
   velocidadExtra: 3
+  layerCaja:
+    serializedVersion: 2
+    m_Bits: 256
+  distanciaRaycast: 0.5
+  offsetRaycast: {x: 0.1, y: 0}
 --- !u!61 &2062050470
 BoxCollider2D:
   m_ObjectHideFlags: 0
