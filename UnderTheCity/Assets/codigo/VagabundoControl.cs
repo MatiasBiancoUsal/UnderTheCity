@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class VagabundoControl : MonoBehaviour
@@ -20,6 +21,8 @@ public class VagabundoControl : MonoBehaviour
     private float escala = 0.349641f;
     private float direccionMirando = 1f;
 
+    private bool bloqueado = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,13 +33,17 @@ public class VagabundoControl : MonoBehaviour
     {
         float movimiento = 0f;
 
-        if (Keyboard.current.aKey.isPressed)
+        if (!bloqueado)
         {
-            movimiento = -1f;
-        }
-        if (Keyboard.current.dKey.isPressed)
-        {
-            movimiento = 1f;
+            if (Keyboard.current.aKey.isPressed)
+            {
+                movimiento = -1f;
+            }
+
+            if (Keyboard.current.dKey.isPressed)
+            {
+                movimiento = 1f;
+            }
         }
 
         rb.linearVelocity = new Vector2(
@@ -54,9 +61,7 @@ public class VagabundoControl : MonoBehaviour
         if (anim != null)
         {
             anim.SetFloat("velocidad", Mathf.Abs(movimiento));
-
             anim.SetBool("isJumping", !enSuelo);
-
             anim.SetBool("Empujando", empujandoCaja);
         }
 
@@ -71,7 +76,9 @@ public class VagabundoControl : MonoBehaviour
             );
         }
 
-        if (Keyboard.current.wKey.wasPressedThisFrame && enSuelo)
+        if (!bloqueado &&
+            Keyboard.current.wKey.wasPressedThisFrame &&
+            enSuelo)
         {
             rb.linearVelocity = new Vector2(
                 rb.linearVelocity.x,
@@ -92,7 +99,8 @@ public class VagabundoControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso"))
+        if (collision.gameObject.CompareTag("Piso") ||
+            collision.gameObject.CompareTag("Caja"))
         {
             enSuelo = true;
         }
@@ -100,19 +108,38 @@ public class VagabundoControl : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso"))
+        if (collision.gameObject.CompareTag("Piso") ||
+            collision.gameObject.CompareTag("Caja"))
         {
             enSuelo = false;
         }
     }
 
-    public void ActivarVelocidadTemporal()
+    public void BeberLata()
     {
         StopAllCoroutines();
+        StartCoroutine(SecuenciaLata());
+    }
+
+    private IEnumerator SecuenciaLata()
+    {
+        bloqueado = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        if (anim != null)
+        {
+            anim.SetTrigger("BeberLata");
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        bloqueado = false;
+
         StartCoroutine(VelocidadTemporal());
     }
 
-    private System.Collections.IEnumerator VelocidadTemporal()
+    private IEnumerator VelocidadTemporal()
     {
         velocidad += velocidadExtra;
 

@@ -24,7 +24,7 @@ public class ItemRecolectable : MonoBehaviour
 
             if (jugador != null)
             {
-                jugador.ActivarVelocidadTemporal();
+                jugador.BeberLata();
                 Destroy(gameObject);
             }
         }

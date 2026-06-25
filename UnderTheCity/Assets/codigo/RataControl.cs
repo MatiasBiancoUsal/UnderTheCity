@@ -42,8 +42,6 @@ public class RataControl : MonoBehaviour
         {
             anim.SetFloat("velocidad", Mathf.Abs(movimiento));
             anim.SetBool("isJumping", !enSuelo);
-
-            // Nueva animación de empujar
             anim.SetBool("isPushing", empujandoCaja && movimiento != 0);
         }
 
@@ -62,13 +60,12 @@ public class RataControl : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
         }
-
-        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso"))
+        if (collision.gameObject.CompareTag("Piso") ||
+            collision.gameObject.CompareTag("Caja"))
         {
             enSuelo = true;
         }
@@ -81,7 +78,8 @@ public class RataControl : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso"))
+        if (collision.gameObject.CompareTag("Piso") ||
+            collision.gameObject.CompareTag("Caja"))
         {
             enSuelo = false;
         }
