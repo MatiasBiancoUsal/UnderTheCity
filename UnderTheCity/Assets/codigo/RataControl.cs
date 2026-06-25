@@ -9,6 +9,8 @@ public class RataControl : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool enSuelo;
+    private bool empujandoCaja;
+
     private Animator anim;
 
     private float escalaX = 0.07186557f;
@@ -28,6 +30,7 @@ public class RataControl : MonoBehaviour
         {
             movimiento = -1f;
         }
+
         if (Keyboard.current.rightArrowKey.isPressed)
         {
             movimiento = 1f;
@@ -38,8 +41,10 @@ public class RataControl : MonoBehaviour
         if (anim != null)
         {
             anim.SetFloat("velocidad", Mathf.Abs(movimiento));
-
             anim.SetBool("isJumping", !enSuelo);
+
+            // Nueva animación de empujar
+            anim.SetBool("isPushing", empujandoCaja && movimiento != 0);
         }
 
         Transform sprite = anim != null ? anim.transform : transform;
@@ -57,6 +62,8 @@ public class RataControl : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
         }
+
+        
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -65,6 +72,11 @@ public class RataControl : MonoBehaviour
         {
             enSuelo = true;
         }
+
+        if (collision.gameObject.CompareTag("Caja"))
+        {
+            empujandoCaja = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -72,6 +84,11 @@ public class RataControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Piso"))
         {
             enSuelo = false;
+        }
+
+        if (collision.gameObject.CompareTag("Caja"))
+        {
+            empujandoCaja = false;
         }
     }
 }

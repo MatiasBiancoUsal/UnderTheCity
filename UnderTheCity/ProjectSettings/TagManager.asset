@@ -8,6 +8,7 @@ TagManager:
   - Rata
   - Ventilador
   - Vagabundo
+  - Caja
   layers:
   - Default
   - TransparentFX
