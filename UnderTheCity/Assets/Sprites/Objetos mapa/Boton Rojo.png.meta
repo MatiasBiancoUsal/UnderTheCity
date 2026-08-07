@@ -111,7 +111,7 @@ TextureImporter:
         width: 283
         height: 125
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -128,12 +128,12 @@ TextureImporter:
       name: Boton Rojo_1
       rect:
         serializedVersion: 2
-        x: 377
-        y: 127
+        x: 372
+        y: 128
         width: 284
-        height: 76
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 17a1d4121f1fd464d9786719e2936bbe
     internalID: 0
     vertices: []
     indices: 
