@@ -1,6 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class CampoVision : MonoBehaviour
 {
@@ -13,11 +14,27 @@ public class CampoVision : MonoBehaviour
     [Header("AUDIO")]
     public AudioSource audioSource;
 
+    [Header("BARRA DE DETECCION")]
+    public GameObject barraDeteccion;
+    public UnityEngine.UI.Image barra;
+
     private float tiempoMirando = 0f;
 
     private HashSet<GameObject> jugadoresDentro = new HashSet<GameObject>();
 
     private bool jugadorDetectado = false;
+
+    void Start()
+    {
+        if (barraDeteccion != null)
+            barraDeteccion.SetActive(false);
+
+        if (barra != null)
+            barra.fillAmount = 0f;
+
+        if (audioSource != null)
+            audioSource.playOnAwake = false;
+    }
 
     void Update()
     {
@@ -33,6 +50,12 @@ public class CampoVision : MonoBehaviour
             tiempoMirando = 0f;
             jugadorDetectado = false;
 
+            if (barra != null)
+                barra.fillAmount = 0f;
+
+            if (barraDeteccion != null)
+                barraDeteccion.SetActive(false);
+
             if (enemigo != null)
                 enemigo.Reanudar();
 
@@ -43,6 +66,12 @@ public class CampoVision : MonoBehaviour
 
         if (enemigo != null)
             enemigo.Parar();
+
+        if (barraDeteccion != null)
+            barraDeteccion.SetActive(true);
+
+        if (barra != null)
+            barra.fillAmount = tiempoMirando / tiempoDeteccion;
 
         if (tiempoMirando >= tiempoDeteccion && !jugadorDetectado)
         {
@@ -68,10 +97,16 @@ public class CampoVision : MonoBehaviour
 
         if (!yaEstabaDentro)
         {
+            tiempoMirando = 0f;
+
+            if (barraDeteccion != null)
+                barraDeteccion.SetActive(true);
+
+            if (barra != null)
+                barra.fillAmount = 0f;
+
             if (audioSource != null)
-            {
                 audioSource.Play();
-            }
         }
     }
 
@@ -88,6 +123,12 @@ public class CampoVision : MonoBehaviour
         {
             tiempoMirando = 0f;
             jugadorDetectado = false;
+
+            if (barra != null)
+                barra.fillAmount = 0f;
+
+            if (barraDeteccion != null)
+                barraDeteccion.SetActive(false);
 
             Enemigo enemigo = transform.parent.GetComponent<Enemigo>();
 
@@ -130,8 +171,7 @@ public class CampoVision : MonoBehaviour
 
         Vector2 origen = enemigo.position;
 
-        Vector2 direccion =
-            (Vector2)jugador.position - origen;
+        Vector2 direccion = (Vector2)jugador.position - origen;
 
         float distancia = direccion.magnitude;
 
