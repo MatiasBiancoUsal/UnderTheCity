@@ -6,7 +6,6 @@ public class PlataformaSubeyBaja : MonoBehaviour
     public Transform posicionAbajo;
     public float velocidad = 2f;
 
-    [HideInInspector]
     public bool activada = false;
 
     void Update()

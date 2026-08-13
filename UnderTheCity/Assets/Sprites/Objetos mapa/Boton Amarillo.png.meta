@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: dbc62e18871544a49a8743291d7c1aa7
+guid: 52d8163bc6124e84bb1390c4858f1bd0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 598490454547737072
-    second: ratacaminata3 copy-07_0
+      213: 378741880004759398
+    second: Boton Amarillo_0
+  - first:
+      213: -4138643230043347795
+    second: Boton Amarillo_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +99,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ratacaminata3 copy-07_0
+      name: Boton Amarillo_0
       rect:
         serializedVersion: 2
-        x: 804
-        y: 565
-        width: 2784
-        height: 857
-      alignment: 9
-      pivot: {x: 0.5, y: 0.82}
+        x: 74
+        y: 446
+        width: 423
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f9a7c0c5e34e4800800000000000000
-      internalID: 598490454547737072
+      spriteID: 66f4f33bbbf814500800000000000000
+      internalID: 378741880004759398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boton Amarillo_1
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 446
+        width: 423
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4e035e8e59096c0800000000000000
+      internalID: -4138643230043347795
       vertices: []
       indices: 
       edges: []
@@ -138,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ff6d7b53e1f606e47a00cf5fdbc84174
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ratacaminata3 copy-07_0: 598490454547737072
+      Boton Amarillo_0: 378741880004759398
+      Boton Amarillo_1: -4138643230043347795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
