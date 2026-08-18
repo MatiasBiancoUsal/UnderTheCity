@@ -72,7 +72,7 @@ public class Enemigo : MonoBehaviour
             velocidad * Time.deltaTime
         );
 
-        if (Vector3.Distance(transform.position, destino) < 0.01f)
+        if (Vector3.Distance(transform.position, destino) < 0.015f)
         {
             transform.position = destino;
 
