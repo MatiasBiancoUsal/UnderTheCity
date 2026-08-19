@@ -23,7 +23,7 @@ public class BotonParedes : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Rata"))
+        if (!collision.CompareTag("Rata") && !collision.CompareTag("Caja"))
             return;
 
         if (botonPulsado)

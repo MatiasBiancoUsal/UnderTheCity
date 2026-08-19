@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9bfb8e6da333d8941938dce5a8b43007
+guid: a40a6feecc65e044abc4b753efdfadc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8336629960936807189
-    second: gato.ilu-03_0
+      213: 2763404171439406435
+    second: gato.ilu-01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gato.ilu-03_0
+      name: gato.ilu-01_0
       rect:
         serializedVersion: 2
-        x: 899
-        y: 563
-        width: 2494
-        height: 1314
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 905
+        y: 577
+        width: 2506
+        height: 1326
+      alignment: 9
+      pivot: {x: 0.5, y: 0.27}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51b5485b7c8a1b370800000000000000
-      internalID: 8336629960936807189
+      spriteID: 36d7a79e375995620800000000000000
+      internalID: 2763404171439406435
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8e9840554e358964d9f5f51b6063252b
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gato.ilu-03_0: 8336629960936807189
+      gato.ilu-01_0: 2763404171439406435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
