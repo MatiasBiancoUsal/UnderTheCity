@@ -13,6 +13,9 @@ public class Enemigo : MonoBehaviour
     [Header("DIRECCION INICIAL")]
     public bool empiezaMirandoDerecha = true;
 
+    [Header("MUERTE")]
+    public bool puedeMorir = true;
+
     private bool yendoAB = true;
     private bool detenido = false;
 
@@ -138,5 +141,23 @@ public class Enemigo : MonoBehaviour
     public void Reanudar()
     {
         detenido = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!puedeMorir)
+            return;
+
+        if (collision.gameObject.CompareTag("Vagabundo"))
+        {
+            foreach (ContactPoint2D contacto in collision.contacts)
+            {
+                if (contacto.normal.y < -0.5f)
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+        }
     }
 }

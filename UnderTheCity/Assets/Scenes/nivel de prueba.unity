@@ -8335,6 +8335,7 @@ GameObject:
   - component: {fileID: 1354700520}
   - component: {fileID: 1354700519}
   - component: {fileID: 1354700518}
+  - component: {fileID: 1354700522}
   m_Layer: 12
   m_Name: "Polic\xEDa"
   m_TagString: Untagged
@@ -8450,6 +8451,7 @@ MonoBehaviour:
   velocidad: 3
   conoVision: {fileID: 151005936}
   empiezaMirandoDerecha: 1
+  puedeMorir: 0
 --- !u!212 &1354700521
 SpriteRenderer:
   serializedVersion: 2
@@ -8509,6 +8511,25 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!251 &1354700522
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354700516}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 179
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &1383256229
 GameObject:
   m_ObjectHideFlags: 0
@@ -10684,6 +10705,7 @@ MonoBehaviour:
   velocidad: 4
   conoVision: {fileID: 1423726671}
   empiezaMirandoDerecha: 1
+  puedeMorir: 1
 --- !u!212 &1691501248
 SpriteRenderer:
   serializedVersion: 2
