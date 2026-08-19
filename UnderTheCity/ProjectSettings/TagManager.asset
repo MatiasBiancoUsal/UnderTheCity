@@ -13,7 +13,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Oscuridad
   - Water
   - UI
   - Vagabundo
@@ -45,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Oscuridad
+    uniqueID: 3687064283
     locked: 0
   - name: Personajes
     uniqueID: 1110979861

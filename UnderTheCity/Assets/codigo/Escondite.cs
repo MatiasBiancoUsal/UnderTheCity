@@ -7,6 +7,9 @@ public class Escondite : MonoBehaviour
     public Sprite texturaVacia;
     public Sprite texturaOcupada;
 
+    [Header("PLATAFORMA")]
+    public GameObject plataforma;
+
     private SpriteRenderer spriteRenderer;
 
     private GameObject jugadorDentro;
@@ -25,6 +28,11 @@ public class Escondite : MonoBehaviour
         if (texturaVacia != null)
         {
             spriteRenderer.sprite = texturaVacia;
+        }
+
+        if (plataforma != null)
+        {
+            plataforma.SetActive(false);
         }
     }
 
@@ -89,6 +97,17 @@ public class Escondite : MonoBehaviour
         {
             col.enabled = false;
         }
+
+        if (spriteRenderer != null && texturaOcupada != null)
+        {
+            spriteRenderer.sprite = texturaOcupada;
+        }
+
+        // ACTIVA LA PLATAFORMA
+        if (plataforma != null)
+        {
+            plataforma.SetActive(true);
+        }
     }
 
     private void MostrarJugador()
@@ -119,6 +138,17 @@ public class Escondite : MonoBehaviour
         {
             rbJugador.constraints = restriccionesOriginales;
         }
+
+        if (spriteRenderer != null && texturaVacia != null)
+        {
+            spriteRenderer.sprite = texturaVacia;
+        }
+
+        // DESACTIVA LA PLATAFORMA
+        if (plataforma != null)
+        {
+            plataforma.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -129,11 +159,6 @@ public class Escondite : MonoBehaviour
             if (!escondido)
             {
                 jugadorDentro = collision.gameObject;
-
-                if (spriteRenderer != null && texturaOcupada != null)
-                {
-                    spriteRenderer.sprite = texturaOcupada;
-                }
             }
         }
     }
@@ -147,6 +172,11 @@ public class Escondite : MonoBehaviour
             if (spriteRenderer != null && texturaVacia != null)
             {
                 spriteRenderer.sprite = texturaVacia;
+            }
+
+            if (plataforma != null)
+            {
+                plataforma.SetActive(false);
             }
         }
     }
