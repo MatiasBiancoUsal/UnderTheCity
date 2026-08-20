@@ -4737,6 +4737,8 @@ MonoBehaviour:
   - {fileID: 1678543259}
   - {fileID: 694212352}
   velocidadOscuridad: 1
+  animatorVagabundo: {fileID: 958417195}
+  animatorRata: {fileID: 709382021}
   velocidadAnimacion: 1
 --- !u!212 &705796152
 SpriteRenderer:
@@ -5990,7 +5992,7 @@ GameObject:
   - component: {fileID: 958417196}
   - component: {fileID: 958417195}
   m_Layer: 6
-  m_Name: idle-01_0
+  m_Name: VagabundoSprite
   m_TagString: Vagabundo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12088,7 +12090,7 @@ Transform:
   m_GameObject: {fileID: 1937024640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.21, y: 10.34, z: 0}
+  m_LocalPosition: {x: 8.01, y: 10.73, z: 0}
   m_LocalScale: {x: 0.9238149, y: 0.7502555, z: 0.9238149}
   m_ConstrainProportionsScale: 0
   m_Children:

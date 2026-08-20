@@ -20,6 +20,8 @@ public class RataControl : MonoBehaviour
     private float escalaX = 0.07186557f;
     private float escalaY = 0.08849049f;
 
+    private bool bloqueado = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,23 +33,43 @@ public class RataControl : MonoBehaviour
     {
         float movimiento = 0f;
 
-        if (Keyboard.current.leftArrowKey.isPressed)
+        if (!bloqueado)
         {
-            movimiento = -1f;
+            if (Keyboard.current.leftArrowKey.isPressed)
+            {
+                movimiento = -1f;
+            }
+
+            if (Keyboard.current.rightArrowKey.isPressed)
+            {
+                movimiento = 1f;
+            }
         }
 
-        if (Keyboard.current.rightArrowKey.isPressed)
-        {
-            movimiento = 1f;
-        }
-
-        rb.linearVelocity = new Vector2(movimiento * velocidad, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(
+            movimiento * velocidad,
+            rb.linearVelocity.y
+        );
 
         if (anim != null)
         {
-            anim.SetFloat("velocidad", Mathf.Abs(movimiento));
-            anim.SetBool("isJumping", !enSuelo);
-            anim.SetBool("isPushing", empujandoCaja && movimiento != 0);
+            if (!bloqueado)
+            {
+                anim.SetFloat(
+                    "velocidad",
+                    Mathf.Abs(movimiento)
+                );
+
+                anim.SetBool(
+                    "isJumping",
+                    !enSuelo
+                );
+
+                anim.SetBool(
+                    "isPushing",
+                    empujandoCaja && movimiento != 0
+                );
+            }
         }
 
         Transform sprite = anim != null ? anim.transform : transform;
@@ -61,15 +83,35 @@ public class RataControl : MonoBehaviour
             );
         }
 
-        if (Keyboard.current.upArrowKey.wasPressedThisFrame && enSuelo)
+        if (!bloqueado &&
+            Keyboard.current.upArrowKey.wasPressedThisFrame &&
+            enSuelo)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
+            rb.linearVelocity = new Vector2(
+                rb.linearVelocity.x,
+                fuerzaSalto
+            );
 
             if (audioSource != null && sonidoSalto != null)
             {
                 audioSource.PlayOneShot(sonidoSalto);
             }
         }
+    }
+
+    public void BloquearParaMaquina()
+    {
+        bloqueado = true;
+
+        rb.linearVelocity = new Vector2(
+            0f,
+            rb.linearVelocity.y
+        );
+    }
+
+    public void DesbloquearParaMaquina()
+    {
+        bloqueado = false;
     }
 
     private void OnCollisionStay2D(Collision2D collision)

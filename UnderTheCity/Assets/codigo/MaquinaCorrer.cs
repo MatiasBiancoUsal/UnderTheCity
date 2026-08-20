@@ -9,16 +9,28 @@ public class MaquinaCorrer : MonoBehaviour
     [Header("VELOCIDAD DE LA TRANSICION")]
     public float velocidadOscuridad = 0.5f;
 
-    [Header("ANIMACION")]
+    [Header("ANIMACION VAGABUNDO")]
+    public Animator animatorVagabundo;
+
+    [Header("ANIMACION RATA")]
+    public Animator animatorRata;
+
+    [Header("VELOCIDAD DE ANIMACION")]
     public float velocidadAnimacion = 1f;
 
     private GameObject jugadorDentro;
+
+    private bool maquinaActiva = false;
+
+    private bool esVagabundo = false;
+    private bool esRata = false;
 
     private bool bajandoOscuridad = false;
     private bool subiendoOscuridad = false;
 
     private SpriteRenderer[] spritesOscuridad;
-    private Animator animatorJugador;
+
+    private RataControl rataControl;
 
     void Start()
     {
@@ -37,13 +49,17 @@ public class MaquinaCorrer : MonoBehaviour
 
     void Update()
     {
-        if (jugadorDentro != null)
+        if (jugadorDentro != null && !maquinaActiva)
         {
             if (Keyboard.current.spaceKey.wasPressedThisFrame)
             {
-                bajandoOscuridad = true;
-                subiendoOscuridad = false;
+                ActivarMaquina();
             }
+        }
+
+        if (maquinaActiva)
+        {
+            MantenerAnimacion();
         }
 
         if (bajandoOscuridad)
@@ -55,22 +71,65 @@ public class MaquinaCorrer : MonoBehaviour
         {
             SubirOscuridad();
         }
-
-        ActualizarAnimacion();
     }
 
-    private void ActualizarAnimacion()
+    private void ActivarMaquina()
     {
-        if (animatorJugador == null)
-            return;
+        maquinaActiva = true;
 
-        if (jugadorDentro != null)
+        bajandoOscuridad = true;
+        subiendoOscuridad = false;
+
+        if (esRata && rataControl != null)
         {
-            animatorJugador.SetFloat("velocidad", velocidadAnimacion);
+            rataControl.BloquearParaMaquina();
         }
-        else
+
+        if (esVagabundo)
         {
-            animatorJugador.SetFloat("velocidad", 0f);
+            if (animatorVagabundo != null)
+            {
+                animatorVagabundo.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
+        }
+
+        if (esRata)
+        {
+            if (animatorRata != null)
+            {
+                animatorRata.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
+        }
+    }
+
+    private void MantenerAnimacion()
+    {
+        if (esVagabundo)
+        {
+            if (animatorVagabundo != null)
+            {
+                animatorVagabundo.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
+        }
+
+        if (esRata)
+        {
+            if (animatorRata != null)
+            {
+                animatorRata.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
         }
     }
 
@@ -82,7 +141,8 @@ public class MaquinaCorrer : MonoBehaviour
         {
             if (zona != null)
             {
-                cantidadSprites += zona.GetComponentsInChildren<SpriteRenderer>().Length;
+                cantidadSprites +=
+                    zona.GetComponentsInChildren<SpriteRenderer>().Length;
             }
         }
 
@@ -94,7 +154,8 @@ public class MaquinaCorrer : MonoBehaviour
         {
             if (zona != null)
             {
-                SpriteRenderer[] sprites = zona.GetComponentsInChildren<SpriteRenderer>();
+                SpriteRenderer[] sprites =
+                    zona.GetComponentsInChildren<SpriteRenderer>();
 
                 foreach (SpriteRenderer sprite in sprites)
                 {
@@ -169,34 +230,75 @@ public class MaquinaCorrer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Vagabundo") ||
-            collision.CompareTag("Rata"))
+        if (collision.CompareTag("Vagabundo"))
         {
             jugadorDentro = collision.gameObject;
 
-            animatorJugador = jugadorDentro.GetComponentInChildren<Animator>();
+            esVagabundo = true;
+            esRata = false;
 
-            if (animatorJugador != null)
+            maquinaActiva = false;
+
+            if (animatorVagabundo != null)
             {
-                animatorJugador.SetFloat("velocidad", velocidadAnimacion);
+                animatorVagabundo.SetFloat("velocidad", 0f);
+            }
+        }
+
+        if (collision.CompareTag("Rata"))
+        {
+            jugadorDentro = collision.gameObject;
+
+            esRata = true;
+            esVagabundo = false;
+
+            maquinaActiva = false;
+
+            rataControl = collision.GetComponent<RataControl>();
+
+            if (animatorRata != null)
+            {
+                animatorRata.SetFloat("velocidad", 0f);
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == jugadorDentro)
+        if (collision.gameObject != jugadorDentro)
+            return;
+
+        if (esVagabundo)
         {
-            if (animatorJugador != null)
+            if (animatorVagabundo != null)
             {
-                animatorJugador.SetFloat("velocidad", 0f);
+                animatorVagabundo.SetFloat("velocidad", 0f);
+            }
+        }
+
+        if (esRata)
+        {
+            if (animatorRata != null)
+            {
+                animatorRata.SetFloat("velocidad", 0f);
             }
 
-            jugadorDentro = null;
-            animatorJugador = null;
-
-            bajandoOscuridad = false;
-            subiendoOscuridad = true;
+            if (rataControl != null)
+            {
+                rataControl.DesbloquearParaMaquina();
+            }
         }
+
+        jugadorDentro = null;
+
+        rataControl = null;
+
+        esVagabundo = false;
+        esRata = false;
+
+        maquinaActiva = false;
+
+        bajandoOscuridad = false;
+        subiendoOscuridad = true;
     }
 }
