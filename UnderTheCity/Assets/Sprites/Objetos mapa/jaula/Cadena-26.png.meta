@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cd04fdba63dba8c4ea73887a37cacbcc
+guid: ebddd401fa442d646a3253c59609b87c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5069919493792591099
-    second: cadenas-01_0
+      213: -1315562811014534202
+    second: Cadena-26_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -96,27 +96,40 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cadenas-01_0
+      name: Cadena-26_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 17
-        width: 97
-        height: 129
+        x: 236
+        y: 151
+        width: 49
+        height: 241
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 22, z: 0, w: 70}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfce5530be8fb5640800000000000000
-      internalID: 5069919493792591099
+      spriteID: 6cba3c1f79e2ebde0800000000000000
+      internalID: -1315562811014534202
       vertices: []
       indices: 
       edges: []
@@ -125,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c50a6989a62a625419d22a76db2c0ea9
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cadenas-01_0: 5069919493792591099
+      Cadena-26_0: -1315562811014534202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
