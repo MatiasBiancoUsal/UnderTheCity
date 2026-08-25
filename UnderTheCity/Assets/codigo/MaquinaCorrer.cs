@@ -74,39 +74,34 @@ public class MaquinaCorrer : MonoBehaviour
     }
 
     private void ActivarMaquina()
+{
+    maquinaActiva = true;
+
+    bajandoOscuridad = true;
+    subiendoOscuridad = false;
+
+    if (esVagabundo)
     {
-        maquinaActiva = true;
-
-        bajandoOscuridad = true;
-        subiendoOscuridad = false;
-
-        if (esRata && rataControl != null)
+        if (animatorVagabundo != null)
         {
-            rataControl.BloquearParaMaquina();
-        }
-
-        if (esVagabundo)
-        {
-            if (animatorVagabundo != null)
-            {
-                animatorVagabundo.SetFloat(
-                    "velocidad",
-                    velocidadAnimacion
-                );
-            }
-        }
-
-        if (esRata)
-        {
-            if (animatorRata != null)
-            {
-                animatorRata.SetFloat(
-                    "velocidad",
-                    velocidadAnimacion
-                );
-            }
+            animatorVagabundo.SetFloat(
+                "velocidad",
+                velocidadAnimacion
+            );
         }
     }
+
+    if (esRata)
+    {
+        if (animatorRata != null)
+        {
+            animatorRata.SetFloat(
+                "velocidad",
+                velocidadAnimacion
+            );
+        }
+    }
+}
 
     private void MantenerAnimacion()
     {
@@ -283,10 +278,6 @@ public class MaquinaCorrer : MonoBehaviour
                 animatorRata.SetFloat("velocidad", 0f);
             }
 
-            if (rataControl != null)
-            {
-                rataControl.DesbloquearParaMaquina();
-            }
         }
 
         jugadorDentro = null;
