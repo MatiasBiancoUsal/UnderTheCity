@@ -34,7 +34,6 @@ public class PlataformaMovil : MonoBehaviour
         {
             foreach (ContactPoint2D contacto in collision.contacts)
             {
-                // El personaje está arriba de la plataforma
                 if (contacto.normal.y < -0.5f)
                 {
                     collision.transform.SetParent(transform);
