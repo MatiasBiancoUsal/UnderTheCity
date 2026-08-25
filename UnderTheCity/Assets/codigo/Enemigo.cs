@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemigo : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class Enemigo : MonoBehaviour
 
     [Header("MUERTE")]
     public bool puedeMorir = true;
+
+    [Header("COMPORTAMIENTO ESPECIAL")]
+    public bool mataJugadorAlColisionar = false;
 
     private bool yendoAB = true;
     private bool detenido = false;
@@ -145,18 +149,30 @@ public class Enemigo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!collision.gameObject.CompareTag("Vagabundo"))
+            return;
+
+        // POLICÍA:
+        // Si esta opción está activada, el jugador pierde
+        // independientemente de desde dónde lo toque.
+        if (mataJugadorAlColisionar)
+        {
+            int indiceActual = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(indiceActual);
+            return;
+        }
+
+        // GATO:
+        // Mantiene el comportamiento original.
         if (!puedeMorir)
             return;
 
-        if (collision.gameObject.CompareTag("Vagabundo"))
+        foreach (ContactPoint2D contacto in collision.contacts)
         {
-            foreach (ContactPoint2D contacto in collision.contacts)
+            if (contacto.normal.y < -0.5f)
             {
-                if (contacto.normal.y < -0.5f)
-                {
-                    Destroy(gameObject);
-                    return;
-                }
+                Destroy(gameObject);
+                return;
             }
         }
     }

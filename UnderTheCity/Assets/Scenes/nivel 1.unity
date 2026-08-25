@@ -4011,6 +4011,7 @@ MonoBehaviour:
   conoVision: {fileID: 639467815}
   empiezaMirandoDerecha: 1
   puedeMorir: 0
+  mataJugadorAlColisionar: 1
 --- !u!1 &1039095281
 GameObject:
   m_ObjectHideFlags: 0
