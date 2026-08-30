@@ -1,64 +1,94 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
+using System.Diagnostics;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instancia;
 
+    [Header("ESTADO DE LOS JUGADORES")]
     public bool vagabundoListo = false;
     public bool rataLista = false;
 
+    [Header("SIGUIENTE NIVEL")]
     public string siguienteNivel;
 
-    bool yaCargo = false;
-
+    [Header("OBJETOS VAGABUNDO")]
     public int cervezas = 0;
-    public int quesos = 0;
-
     public int cervezasNecesarias = 3;
+
+    [Header("OBJETOS RATA")]
+    public int quesos = 0;
     public int quesosNecesarios = 3;
 
+    [Header("TIEMPO")]
     public float tiempoTranscurrido = 0f;
-
     public TMP_Text textoTiempo;
 
-    void Awake()
+    private bool yaCargo = false;
+
+    private void Awake()
     {
         instancia = this;
     }
 
-    void Update()
+    private void Update()
     {
         tiempoTranscurrido += Time.deltaTime;
 
         if (textoTiempo != null)
         {
-            textoTiempo.text = "Tiempo: " + tiempoTranscurrido.ToString("F2") + " s";
+            textoTiempo.text = $"Tiempo: {tiempoTranscurrido:F2} s";
         }
 
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
-            int indiceActual = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(indiceActual);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+
+    public void IntentarCambiarDeNivel()
+    {
+        if (yaCargo)
+            return;
 
         bool vagabundoCompleto = cervezas >= cervezasNecesarias;
         bool rataCompleta = quesos >= quesosNecesarios;
 
-        if (!yaCargo && vagabundoListo && rataLista && vagabundoCompleto && rataCompleta)
+        Debug.Log(
+            $"COMPROBANDO SALIDA -> Vagabundo listo: {vagabundoListo} | " +
+            $"Rata lista: {rataLista} | Cervezas: {cervezas}/{cervezasNecesarias} | " +
+            $"Quesos: {quesos}/{quesosNecesarios}"
+        );
+
+        if (!(vagabundoListo && rataLista && vagabundoCompleto && rataCompleta))
         {
-            yaCargo = true;
-
-            Debug.Log("Tiempo completado: " + tiempoTranscurrido.ToString("F2") + " segundos");
-
-            // ✅ Guardar progreso antes de cambiar de escena
-            int nivelActual = SceneManager.GetActiveScene().buildIndex;
-            PlayerPrefs.SetInt("NivelDesbloqueado", Mathf.Max(PlayerPrefs.GetInt("NivelDesbloqueado", 1), nivelActual + 1));
-            PlayerPrefs.Save();
-
-            SceneManager.LoadScene(siguienteNivel);
+            Debug.Log("NO SE PUEDE CAMBIAR DE NIVEL TODAVIA.");
+            return;
         }
+
+        yaCargo = true;
+
+        Debug.Log($"NIVEL COMPLETADO -> Tiempo: {tiempoTranscurrido:F2} segundos");
+
+        if (string.IsNullOrEmpty(siguienteNivel))
+        {
+            Debug.LogError("No asignaste el campo 'Siguiente Nivel' en el GameManager.");
+            yaCargo = false;
+            return;
+        }
+
+        int nivelActual = SceneManager.GetActiveScene().buildIndex;
+
+        PlayerPrefs.SetInt(
+            "NivelDesbloqueado",
+            Mathf.Max(PlayerPrefs.GetInt("NivelDesbloqueado", 1), nivelActual + 1)
+        );
+        PlayerPrefs.Save();
+
+        SceneManager.LoadScene(siguienteNivel);
     }
 }
