@@ -7,14 +7,21 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlataformaBalanceo : MonoBehaviour
 {
-    [Header("Inclinación")]
-    public float anguloMaximo = 25f;
-    public float velocidadRotacion = 2f;
+    [Header("Giro por peso")]
+    [Tooltip("Qué tan fuerte acelera el giro la diferencia de peso. Subilo si te cuesta que empiece a girar, bajalo si gira demasiado rápido con poco peso encima.")]
+    public float factorTorque = 15f;
 
-    [Tooltip("Diferencia de 'torque' (peso x distancia) necesaria para llegar al ángulo máximo. Subilo si se inclina demasiado rápido/brusco, bajalo si casi no se mueve.")]
-    public float torqueParaAnguloMaximo = 5f;
+    [Tooltip("Velocidad angular máxima permitida, en grados por segundo. Esto evita que gire descontroladamente rápido.")]
+    public float velocidadAngularMaxima = 180f;
 
-    private float anguloObjetivo = 0f;
+    [Header("Fricción (frenado realista)")]
+    [Tooltip("Cuánta velocidad angular pierde por segundo cuando no hay nadie empujando (o incluso mientras empujan, si el torque no alcanza a compensarla). Es un frenado CONSTANTE, no exponencial, para que se sienta natural y realmente llegue a pararse. Más alto = frena más rápido.")]
+    public float friccionAngular = 90f;
+
+    // Velocidad angular actual, en grados por segundo. Positivo = sentido horario, negativo = antihorario (o viceversa según tus ejes).
+    private float velocidadAngular = 0f;
+
+    private Rigidbody2D rb;
 
     // Guardamos quién está parado encima y su componente de peso
     private Dictionary<Transform, PesoObjeto> objetosEncima = new Dictionary<Transform, PesoObjeto>();
@@ -22,32 +29,36 @@ public class PlataformaBalanceo : MonoBehaviour
     void Awake()
     {
         // Nos aseguramos de que el Rigidbody2D sea Kinematic:
-        // no queremos que la física mueva la plataforma sola,
-        // solo que detecte colisiones mientras la rotamos nosotros.
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        // no queremos que la física de Unity mueva la plataforma sola,
+        // solo que detecte colisiones mientras la rotamos nosotros a mano.
+        rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        CalcularAnguloObjetivo();
+        float torqueTotal = CalcularTorqueTotal();
 
-        float anguloActual = transform.localEulerAngles.z;
-        if (anguloActual > 180f)
-        {
-            anguloActual -= 360f;
-        }
+        // El torque de los personajes ACELERA la velocidad angular
+        // (como aplicar fuerza a un sube y baja real).
+        // Signo negativo: peso a la derecha empuja el giro hacia ese lado.
+        velocidadAngular += -torqueTotal * factorTorque * Time.fixedDeltaTime;
 
-        float nuevoAngulo = Mathf.Lerp(
-            anguloActual,
-            anguloObjetivo,
-            velocidadRotacion * Time.deltaTime
-        );
+        // Tope de velocidad máxima, para que no gire como una licuadora
+        velocidadAngular = Mathf.Clamp(velocidadAngular, -velocidadAngularMaxima, velocidadAngularMaxima);
 
-        transform.localRotation = Quaternion.Euler(0f, 0f, nuevoAngulo);
+        // Fricción: resta velocidad de forma CONSTANTE hacia 0 (no asintótica).
+        // Esto es lo que hace que frene de forma realista y en algún momento
+        // se detenga del todo, en vez de temblar cerca de cero para siempre.
+        velocidadAngular = Mathf.MoveTowards(velocidadAngular, 0f, friccionAngular * Time.fixedDeltaTime);
+
+        // Integramos la velocidad angular para obtener el nuevo ángulo.
+        // No hay límite de ángulo: puede girar 360° las veces que haga falta.
+        float nuevoAngulo = rb.rotation + velocidadAngular * Time.fixedDeltaTime;
+        rb.MoveRotation(nuevoAngulo);
     }
 
-    private void CalcularAnguloObjetivo()
+    private float CalcularTorqueTotal()
     {
         float torqueTotal = 0f;
 
@@ -57,22 +68,17 @@ public class PlataformaBalanceo : MonoBehaviour
             float peso = kvp.Value.peso;
 
             // Distancia horizontal del personaje al centro de la plataforma.
-            // Positivo = está a la derecha, negativo = está a la izquierda.
             float distanciaAlCentro = objeto.position.x - transform.position.x;
 
             // Cada personaje aporta peso x distancia (como un sube y baja real)
             torqueTotal += peso * distanciaAlCentro;
         }
 
-        // Si el torque es positivo (peso a la derecha), la plataforma
-        // debe bajar del lado derecho -> ángulo negativo. Por eso el signo negativo.
-        anguloObjetivo = Mathf.Clamp(
-            -torqueTotal / torqueParaAnguloMaximo * anguloMaximo,
-            -anguloMaximo,
-            anguloMaximo
-        );
+        return torqueTotal;
     }
 
+    // El Collider2D vive en este mismo objeto (PuntoGiroPlataforma),
+    // así que Unity llama a estos eventos automáticamente.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         PesoObjeto peso = collision.gameObject.GetComponent<PesoObjeto>();
