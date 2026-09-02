@@ -38,4 +38,12 @@ public class MenuDeJuego : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("menu");
     }
+
+    public void MenuNiveles()
+    {
+        Debug.Log("CLICK FUNCIONA");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Niveles");
+    }
+
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42090de5c21afb54581505d42ae20c81
+guid: 3c4f43cd474884b4f8fe751290433ab2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5817711104976832483
-    second: plataformas movibles-01_0
+      213: 8541408124429884053
+    second: Plataforma rota_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plataformas movibles-01_0
+      name: Plataforma rota_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 41
-        width: 607
-        height: 58
+        x: 8
+        y: 39
+        width: 610
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d18b206d296534fa0800000000000000
-      internalID: -5817711104976832483
+      spriteID: 59a57425f6d298670800000000000000
+      internalID: 8541408124429884053
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 68e6c5d83ff75db44ae95270ca42fc46
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      plataformas movibles-01_0: -5817711104976832483
+      Plataforma rota_0: 8541408124429884053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
