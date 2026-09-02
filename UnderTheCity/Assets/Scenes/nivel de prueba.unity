@@ -1619,6 +1619,11 @@ MonoBehaviour:
     m_Bits: 256
   distanciaRaycast: 0.3
   offsetRaycast: {x: 0.4, y: 0}
+  layerSuelo:
+    serializedVersion: 2
+    m_Bits: 3328
+  distanciaSuelo: 0.58
+  offsetSuelo: {x: 0, y: -0.5}
 --- !u!4 &261897793
 Transform:
   m_ObjectHideFlags: 0
@@ -3520,7 +3525,7 @@ GameObject:
   - component: {fileID: 570834229}
   - component: {fileID: 570834228}
   - component: {fileID: 570834227}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlataformaRompible
   m_TagString: Piso
   m_Icon: {fileID: 0}
@@ -11001,6 +11006,11 @@ MonoBehaviour:
   velocidad: 5
   fuerzaSalto: 7
   sonidoSalto: {fileID: 8300000, guid: 833e8dc213d2ff24cb6ef143ea12ce9e, type: 3}
+  layerSuelo:
+    serializedVersion: 2
+    m_Bits: 3072
+  distanciaSuelo: 0.11
+  offsetSuelo: {x: 0, y: -0.5}
 --- !u!61 &1937024643
 BoxCollider2D:
   m_ObjectHideFlags: 0

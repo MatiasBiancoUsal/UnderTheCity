@@ -10,6 +10,11 @@ public class RataControl : MonoBehaviour
     [Header("Sonidos")]
     public AudioClip sonidoSalto;
 
+    [Header("Detección de suelo (Raycast)")]
+    public LayerMask layerSuelo;
+    public float distanciaSuelo = 0.15f;
+    public Vector2 offsetSuelo = new Vector2(0f, -0.5f);
+
     private Rigidbody2D rb;
     private bool enSuelo;
     private bool empujandoCaja;
@@ -31,6 +36,8 @@ public class RataControl : MonoBehaviour
 
     void Update()
     {
+        enSuelo = DetectarSuelo();
+
         float movimiento = 0f;
 
         if (!bloqueado)
@@ -71,7 +78,6 @@ public class RataControl : MonoBehaviour
                 );
             }
         }
-
         Transform sprite = anim != null ? anim.transform : transform;
 
         if (movimiento != 0)
@@ -99,6 +105,20 @@ public class RataControl : MonoBehaviour
         }
     }
 
+    private bool DetectarSuelo()
+    {
+        Vector2 origen = (Vector2)transform.position + offsetSuelo;
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            origen,
+            Vector2.down,
+            distanciaSuelo,
+            layerSuelo
+        );
+
+        return hit.collider != null;
+    }
+
     public void BloquearParaMaquina()
     {
         bloqueado = true;
@@ -116,12 +136,6 @@ public class RataControl : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso") ||
-            collision.gameObject.CompareTag("Caja"))
-        {
-            enSuelo = true;
-        }
-
         if (collision.gameObject.CompareTag("Caja"))
         {
             empujandoCaja = true;
@@ -130,15 +144,21 @@ public class RataControl : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Piso") ||
-            collision.gameObject.CompareTag("Caja"))
-        {
-            enSuelo = false;
-        }
-
         if (collision.gameObject.CompareTag("Caja"))
         {
             empujandoCaja = false;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector2 origenSuelo = (Vector2)transform.position + offsetSuelo;
+
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawLine(
+            origenSuelo,
+            origenSuelo + Vector2.down * distanciaSuelo
+        );
     }
 }

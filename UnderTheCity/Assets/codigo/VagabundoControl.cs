@@ -18,6 +18,11 @@ public class VagabundoControl : MonoBehaviour
     public float distanciaRaycast = 0.3f;
     public Vector2 offsetRaycast = new Vector2(0.4f, 0f);
 
+    [Header("Detección de suelo (Raycast)")]
+    public LayerMask layerSuelo;
+    public float distanciaSuelo = 0.15f;
+    public Vector2 offsetSuelo = new Vector2(0f, -0.5f);
+
     private Rigidbody2D rb;
     private bool enSuelo;
     private Animator anim;
@@ -37,6 +42,8 @@ public class VagabundoControl : MonoBehaviour
 
     void Update()
     {
+        enSuelo = DetectarSuelo();
+
         float movimiento = 0f;
 
         if (!bloqueado)
@@ -98,38 +105,34 @@ public class VagabundoControl : MonoBehaviour
         }
     }
 
+    private bool DetectarSuelo()
+    {
+        Vector2 origen = (Vector2)transform.position + offsetSuelo;
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            origen,
+            Vector2.down,
+            distanciaSuelo,
+            layerSuelo
+        );
+
+        return hit.collider != null;
+    }
+
     private bool DetectarCajaConRaycast(float movimiento)
     {
         if (Mathf.Abs(movimiento) < 0.01f) return false;
 
         Vector2 origen = (Vector2)transform.position + offsetRaycast * direccionMirando;
-        RaycastHit2D hit = Physics2D.Raycast(origen, Vector2.right * direccionMirando, distanciaRaycast, layerCaja);
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            origen,
+            Vector2.right * direccionMirando,
+            distanciaRaycast,
+            layerCaja
+        );
 
         return hit.collider != null;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Piso") ||
-            collision.gameObject.CompareTag("Caja"))
-        {
-            enSuelo = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Piso") ||
-            collision.gameObject.CompareTag("Caja"))
-        {
-            enSuelo = false;
-        }
-    }
-
-    public void BeberLata()
-    {
-        StopAllCoroutines();
-        StartCoroutine(SecuenciaLata());
     }
 
     private IEnumerator SecuenciaLata()
@@ -164,10 +167,31 @@ public class VagabundoControl : MonoBehaviour
         velocidad -= velocidadExtra;
     }
 
+    public void BeberLata()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SecuenciaLata());
+    }
+
     private void OnDrawGizmos()
     {
-        Vector2 origen = (Vector2)transform.position + offsetRaycast * direccionMirando;
+        Vector2 origenCaja = (Vector2)transform.position +
+                             offsetRaycast * direccionMirando;
+
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(origen, origen + Vector2.right * direccionMirando * distanciaRaycast);
+
+        Gizmos.DrawLine(
+            origenCaja,
+            origenCaja + Vector2.right * direccionMirando * distanciaRaycast
+        );
+
+        Vector2 origenSuelo = (Vector2)transform.position + offsetSuelo;
+
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawLine(
+            origenSuelo,
+            origenSuelo + Vector2.down * distanciaSuelo
+        );
     }
 }
