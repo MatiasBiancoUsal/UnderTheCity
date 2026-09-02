@@ -33,7 +33,7 @@ public class Enemigo : MonoBehaviour
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
         if (puntoA != null)
             posicionA = puntoA.position;
