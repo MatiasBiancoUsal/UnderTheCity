@@ -52,5 +52,8 @@ TagManager:
   - name: Personajes
     uniqueID: 1110979861
     locked: 0
+  - name: Rata
+    uniqueID: 151862639
+    locked: 0
   m_RenderingLayers:
   - Default

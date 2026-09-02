@@ -1546,7 +1546,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -1582,7 +1582,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -4572,7 +4572,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1110979861
   m_SortingLayer: 2
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2945342559818402220, guid: 0e45872e383f5e84993c1d0181a48d6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4718,7 +4718,7 @@ GameObject:
   - component: {fileID: 766850458}
   - component: {fileID: 766850457}
   - component: {fileID: 766850456}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Trampilla
   m_TagString: Piso
   m_Icon: {fileID: 0}
@@ -7037,7 +7037,7 @@ GameObject:
   - component: {fileID: 1223121002}
   - component: {fileID: 1223121003}
   - component: {fileID: 1223121004}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: jaula-01_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7152,7 +7152,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.025800228, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.1, y: 0, z: 0.10666667, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7162,7 +7162,7 @@ BoxCollider2D:
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.26, y: 0.52}
+  m_Size: {x: 8.491286, y: 0.52}
   m_EdgeRadius: 0
 --- !u!1 &1263973071
 GameObject:
@@ -11079,7 +11079,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -12469,7 +12469,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000015353842db22c4db
+  m_ApplyToSortingLayers: 0000000015353842db22c4db6f3d0d09
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

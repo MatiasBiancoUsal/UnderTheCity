@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 71384505}
   - component: {fileID: 71384504}
   - component: {fileID: 71384507}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: piso
   m_TagString: Piso
   m_Icon: {fileID: 0}
@@ -3581,7 +3581,7 @@ GameObject:
   - component: {fileID: 851935312}
   - component: {fileID: 851935311}
   - component: {fileID: 851935310}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: piso
   m_TagString: Piso
   m_Icon: {fileID: 0}
@@ -9241,6 +9241,11 @@ MonoBehaviour:
     m_Bits: 256
   distanciaRaycast: 0.5
   offsetRaycast: {x: 0.1, y: 0}
+  layerSuelo:
+    serializedVersion: 2
+    m_Bits: 3072
+  distanciaSuelo: 0.58
+  offsetSuelo: {x: 0, y: -0.5}
 --- !u!61 &2062050470
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9819,6 +9824,11 @@ MonoBehaviour:
   velocidad: 5
   fuerzaSalto: 7
   sonidoSalto: {fileID: 8300000, guid: 833e8dc213d2ff24cb6ef143ea12ce9e, type: 3}
+  layerSuelo:
+    serializedVersion: 2
+    m_Bits: 0
+  distanciaSuelo: 0.15
+  offsetSuelo: {x: 0, y: -0.5}
 --- !u!61 &2080683993
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10136,7 +10146,7 @@ GameObject:
   - component: {fileID: 2131890154}
   - component: {fileID: 2131890156}
   - component: {fileID: 2131890155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: piso
   m_TagString: Piso
   m_Icon: {fileID: 0}
