@@ -2146,9 +2146,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed47551ae8f9c0643a68d4443cdf2081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlataformaBalanceo
-  factorTorque: 15
-  velocidadAngularMaxima: 180
-  friccionAngular: 90
+  masa: 3
+  gravedad: 1
+  resistenciaRotacion: 0.5
+  fuerzaMinima: 15
+  fuerzaMaxima: 80
+  zonaCentro: 0.15
+  tiempoAntesDeVolver: 1
+  velocidadRegreso: 120
+  fuerzaRegreso: 10
 --- !u!50 &381536231
 Rigidbody2D:
   serializedVersion: 5
@@ -4728,9 +4734,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed47551ae8f9c0643a68d4443cdf2081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlataformaBalanceo
-  factorTorque: 15
-  velocidadAngularMaxima: 180
-  friccionAngular: 90
+  masa: 3
+  gravedad: 1
+  resistenciaRotacion: 0.5
+  fuerzaMinima: 15
+  fuerzaMaxima: 80
+  zonaCentro: 0.15
+  tiempoAntesDeVolver: 1
+  velocidadRegreso: 120
+  fuerzaRegreso: 10
 --- !u!50 &706383024
 Rigidbody2D:
   serializedVersion: 5
@@ -12918,9 +12930,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed47551ae8f9c0643a68d4443cdf2081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlataformaBalanceo
-  factorTorque: 75
-  velocidadAngularMaxima: 30
-  friccionAngular: 20
+  masa: 3
+  gravedad: 1
+  resistenciaRotacion: 0.5
+  fuerzaMinima: 8
+  fuerzaMaxima: 20
+  zonaCentro: 0.03
+  tiempoAntesDeVolver: 5
+  velocidadRegreso: 2
+  fuerzaRegreso: 0.8
 --- !u!50 &2052565475
 Rigidbody2D:
   serializedVersion: 5
@@ -12929,13 +12947,13 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052565473}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.5
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -12944,9 +12962,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 3
 --- !u!4 &2052565476
 Transform:
