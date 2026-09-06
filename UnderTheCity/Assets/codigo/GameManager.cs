@@ -1,8 +1,7 @@
-using System.Diagnostics;
-using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using TMPro;
 using Debug = UnityEngine.Debug;
 
 public class GameManager : MonoBehaviour
@@ -41,11 +40,12 @@ public class GameManager : MonoBehaviour
 
         if (textoTiempo != null)
         {
-            textoTiempo.text = $"{tiempoTranscurrido:F2} s";
+            textoTiempo.text = $"Tiempo: {tiempoTranscurrido:F2} s";
         }
 
         if (Keyboard.current.rKey.wasPressedThisFrame)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
@@ -89,6 +89,14 @@ public class GameManager : MonoBehaviour
         );
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene(siguienteNivel);
+        if (PantallaVictoria.instancia != null)
+        {
+            PantallaVictoria.instancia.Mostrar(tiempoTranscurrido, siguienteNivel);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró PantallaVictoria en la escena, cargando nivel directo.");
+            SceneManager.LoadScene(siguienteNivel);
+        }
     }
 }
