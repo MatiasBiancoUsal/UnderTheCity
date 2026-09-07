@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 440357520}
   - component: {fileID: 440357519}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Candado Nivel 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 450954180}
   - component: {fileID: 450954179}
   m_Layer: 5
-  m_Name: Image (12)
+  m_Name: Candado Nivel 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 730967216}
   - component: {fileID: 730967215}
   m_Layer: 5
-  m_Name: Image (10)
+  m_Name: Candado Nivel 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1079,7 +1079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 742317193}
   - component: {fileID: 742317192}
   m_Layer: 5
-  m_Name: Image (11)
+  m_Name: Candado Nivel 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,7 +1291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1321,7 +1321,7 @@ GameObject:
   - component: {fileID: 759365761}
   - component: {fileID: 759365760}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Candado Nivel 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1638,7 +1638,7 @@ GameObject:
   - component: {fileID: 1009983735}
   - component: {fileID: 1009983734}
   m_Layer: 5
-  m_Name: Image (8)
+  m_Name: Candado Nivel 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 1060036895}
   - component: {fileID: 1060036894}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Candado Nivel 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 1080110506}
   - component: {fileID: 1080110505}
   m_Layer: 5
-  m_Name: Image (13)
+  m_Name: Candado Nivel 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1877,7 +1877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2177,7 +2177,7 @@ GameObject:
   - component: {fileID: 1313310822}
   - component: {fileID: 1313310821}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Candado Nivel 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 1686508895}
   - component: {fileID: 1686508894}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Candado Nivel 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2832,7 +2832,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2862,7 +2862,7 @@ GameObject:
   - component: {fileID: 1784039268}
   - component: {fileID: 1784039267}
   m_Layer: 5
-  m_Name: Image (9)
+  m_Name: Candado Nivel 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2907,7 +2907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2955,19 +2955,19 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 870058319}
+  - {fileID: 1489914487}
   - {fileID: 2075275558}
   - {fileID: 1313310820}
+  - {fileID: 450954178}
   - {fileID: 440357518}
+  - {fileID: 1686508893}
   - {fileID: 1060036893}
   - {fileID: 759365759}
-  - {fileID: 1686508893}
-  - {fileID: 1009983733}
-  - {fileID: 450954178}
   - {fileID: 1080110504}
+  - {fileID: 1009983733}
+  - {fileID: 742317191}
   - {fileID: 1784039266}
   - {fileID: 730967214}
-  - {fileID: 742317191}
-  - {fileID: 1489914487}
   m_Father: {fileID: 1326359842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815712011
@@ -3302,7 +3302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7227559099522466619, guid: a87c1996ac3a8fc48af44bd3e7f5d6b2, type: 3}
+  m_Sprite: {fileID: -4947818527034303837, guid: b85dc045abce4a548b9b2d135a6b93d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
