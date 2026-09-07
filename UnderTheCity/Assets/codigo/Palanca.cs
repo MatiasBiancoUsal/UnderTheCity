@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 using Debug = UnityEngine.Debug;
 
 public class Palanca : MonoBehaviour
@@ -9,6 +10,9 @@ public class Palanca : MonoBehaviour
 
     [Header("CLIP DE LA PALANCA (arrastrar aca y listo)")]
     public AnimationClip animacionPalanca;
+
+    [Header("TEXTO DE INTERACCION")]
+    public GameObject textoInteraccion;
 
     private Animator animator;
     private bool jugadorCerca = false;
@@ -29,6 +33,11 @@ public class Palanca : MonoBehaviour
         else
         {
             animator.speed = 0f;
+        }
+
+        if (textoInteraccion != null)
+        {
+            textoInteraccion.SetActive(false);
         }
     }
 
@@ -89,6 +98,11 @@ public class Palanca : MonoBehaviour
         if (collision.CompareTag("Vagabundo"))
         {
             jugadorCerca = true;
+
+            if (textoInteraccion != null)
+            {
+                textoInteraccion.SetActive(true);
+            }
         }
     }
 
@@ -97,6 +111,11 @@ public class Palanca : MonoBehaviour
         if (collision.CompareTag("Vagabundo"))
         {
             jugadorCerca = false;
+
+            if (textoInteraccion != null)
+            {
+                textoInteraccion.SetActive(false);
+            }
         }
     }
 }
