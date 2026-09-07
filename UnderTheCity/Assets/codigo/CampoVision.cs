@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CampoVision : MonoBehaviour
@@ -77,7 +76,7 @@ public class CampoVision : MonoBehaviour
         {
             jugadorDetectado = true;
 
-            ReiniciarNivel();
+            MostrarPantallaDerrota();
         }
     }
 
@@ -185,10 +184,18 @@ public class CampoVision : MonoBehaviour
         return golpe.collider != null;
     }
 
-    void ReiniciarNivel()
+    void MostrarPantallaDerrota()
     {
-        SceneManager.LoadScene(
-            SceneManager.GetActiveScene().name
-        );
+        if (PantallaDerrota.instancia != null)
+        {
+            PantallaDerrota.instancia.Mostrar();
+        }
+        else
+        {
+            UnityEngine.Debug.LogError(
+                "No se encontró una PantallaDerrota en la escena. " +
+                "Asegurate de tener el objeto con el script PantallaDerrota."
+            );
+        }
     }
 }

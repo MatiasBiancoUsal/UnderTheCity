@@ -1,20 +1,25 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class ZonaMuerte : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.CompareTag("Vagabundo") || collision.CompareTag("Rata"))
         {
-            ReiniciarNivel();
+            MostrarPantallaDerrota();
         }
     }
 
-    void ReiniciarNivel()
+    private void MostrarPantallaDerrota()
     {
-        int indiceActual = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(indiceActual);
+        if (PantallaDerrota.instancia != null)
+        {
+            PantallaDerrota.instancia.Mostrar();
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró PantallaDerrota en la escena.");
+        }
     }
 }

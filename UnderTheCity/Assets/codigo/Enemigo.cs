@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class Enemigo : MonoBehaviour
 {
@@ -152,18 +152,13 @@ public class Enemigo : MonoBehaviour
         if (!collision.gameObject.CompareTag("Vagabundo"))
             return;
 
-        // POLICÍA:
-        // Si esta opción está activada, el jugador pierde
-        // independientemente de desde dónde lo toque.
+
         if (mataJugadorAlColisionar)
         {
-            int indiceActual = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(indiceActual);
+            MostrarPantallaDerrota();
             return;
         }
 
-        // GATO:
-        // Mantiene el comportamiento original.
         if (!puedeMorir)
             return;
 
@@ -174,6 +169,18 @@ public class Enemigo : MonoBehaviour
                 Destroy(gameObject);
                 return;
             }
+        }
+    }
+
+    private void MostrarPantallaDerrota()
+    {
+        if (PantallaDerrota.instancia != null)
+        {
+            PantallaDerrota.instancia.Mostrar();
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró PantallaDerrota en la escena.");
         }
     }
 }
