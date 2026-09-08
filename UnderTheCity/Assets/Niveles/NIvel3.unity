@@ -3162,8 +3162,8 @@ MonoBehaviour:
   - {fileID: 1666004732}
   - {fileID: 1338341559}
   - {fileID: 209280471}
-  estrellaLlena: {fileID: 4941411649778583052, guid: 1658b695fdcd1a244bd4ac8bd2432f2f, type: 3}
-  estrellaVacia: {fileID: -7809287582781010337, guid: 4d6b9e15a862952438cfc89cd4fb005b, type: 3}
+  estrellaLlena: {fileID: 4851644199299583258, guid: 4c1f5638b14aaee449cbb4af7418fa1a, type: 3}
+  estrellaVacia: {fileID: 6633203956270877855, guid: f651d685be2acc0498a0070c0a9e8d13, type: 3}
   tiempoParaTresEstrellas: 20
   tiempoParaDosEstrellas: 35
 --- !u!114 &578162034
