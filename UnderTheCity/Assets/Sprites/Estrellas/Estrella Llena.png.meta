@@ -103,10 +103,10 @@ TextureImporter:
       name: Estrella Llena_0
       rect:
         serializedVersion: 2
-        x: 272
-        y: 274
-        width: 2377
-        height: 2353
+        x: 189
+        y: 260
+        width: 2506
+        height: 2469
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

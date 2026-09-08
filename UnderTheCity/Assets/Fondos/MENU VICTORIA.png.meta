@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f651d685be2acc0498a0070c0a9e8d13
+guid: 41a1b56b8aa3a6c4ca11230a1fc471ae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6633203956270877855
-    second: Estrella Vacia_0
+      213: 4889943716182760298
+    second: MENU VICTORIA_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Estrella Vacia_0
+      name: MENU VICTORIA_0
       rect:
         serializedVersion: 2
-        x: 184
-        y: 222
-        width: 2516
-        height: 2473
+        x: 1657
+        y: 682
+        width: 4686
+        height: 3136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9ccd30aadfdd0c50800000000000000
-      internalID: 6633203956270877855
+      spriteID: a6b1abed6e19cd340800000000000000
+      internalID: 4889943716182760298
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Estrella Vacia_0: 6633203956270877855
+      MENU VICTORIA_0: 4889943716182760298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
