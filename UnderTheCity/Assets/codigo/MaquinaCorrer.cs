@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Image = UnityEngine.UI.Image;
 
 public class MaquinaCorrer : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class MaquinaCorrer : MonoBehaviour
     [Header("VELOCIDAD DE ANIMACION")]
     public float velocidadAnimacion = 1f;
 
+    [Header("BARRA DE PROGRESO (PRENDER LUZ)")]
+    public Image barra;
+
     private GameObject jugadorDentro;
 
     private bool maquinaActiva = false;
@@ -29,6 +33,8 @@ public class MaquinaCorrer : MonoBehaviour
     private bool subiendoOscuridad = false;
 
     private SpriteRenderer[] spritesOscuridad;
+
+    private float alphaInicial;
 
     private RataControl rataControl;
 
@@ -45,6 +51,11 @@ public class MaquinaCorrer : MonoBehaviour
                 sprite.color = color;
             }
         }
+
+        // El fondo de la barra queda siempre visible (pantallita negra).
+        // Solo el relleno (fillAmount) arranca en 0.
+        if (barra != null)
+            barra.fillAmount = 0f;
     }
 
     void Update()
@@ -74,34 +85,41 @@ public class MaquinaCorrer : MonoBehaviour
     }
 
     private void ActivarMaquina()
-{
-    maquinaActiva = true;
-
-    bajandoOscuridad = true;
-    subiendoOscuridad = false;
-
-    if (esVagabundo)
     {
-        if (animatorVagabundo != null)
+        maquinaActiva = true;
+
+        bajandoOscuridad = true;
+        subiendoOscuridad = false;
+
+        alphaInicial = spritesOscuridad.Length > 0 && spritesOscuridad[0] != null
+            ? spritesOscuridad[0].color.a
+            : 254f / 255f;
+
+        if (barra != null)
+            barra.fillAmount = 0f;
+
+        if (esVagabundo)
         {
-            animatorVagabundo.SetFloat(
-                "velocidad",
-                velocidadAnimacion
-            );
+            if (animatorVagabundo != null)
+            {
+                animatorVagabundo.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
+        }
+
+        if (esRata)
+        {
+            if (animatorRata != null)
+            {
+                animatorRata.SetFloat(
+                    "velocidad",
+                    velocidadAnimacion
+                );
+            }
         }
     }
-
-    if (esRata)
-    {
-        if (animatorRata != null)
-        {
-            animatorRata.SetFloat(
-                "velocidad",
-                velocidadAnimacion
-            );
-        }
-    }
-}
 
     private void MantenerAnimacion()
     {
@@ -186,9 +204,21 @@ public class MaquinaCorrer : MonoBehaviour
             }
         }
 
+        if (barra != null && alphaInicial > 0f)
+        {
+            float alphaActual = spritesOscuridad.Length > 0 && spritesOscuridad[0] != null
+                ? spritesOscuridad[0].color.a
+                : 0f;
+
+            barra.fillAmount = 1f - (alphaActual / alphaInicial);
+        }
+
         if (termino)
         {
             bajandoOscuridad = false;
+
+            if (barra != null)
+                barra.fillAmount = 1f;
         }
     }
 
@@ -277,7 +307,6 @@ public class MaquinaCorrer : MonoBehaviour
             {
                 animatorRata.SetFloat("velocidad", 0f);
             }
-
         }
 
         jugadorDentro = null;
@@ -291,5 +320,8 @@ public class MaquinaCorrer : MonoBehaviour
 
         bajandoOscuridad = false;
         subiendoOscuridad = true;
+
+        if (barra != null)
+            barra.fillAmount = 0f;
     }
 }
