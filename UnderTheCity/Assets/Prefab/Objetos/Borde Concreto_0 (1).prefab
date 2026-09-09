@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 587129649057577863}
   - component: {fileID: 6733290792637210801}
   - component: {fileID: 1095550611362270747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Borde Concreto_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 0.89, y: 6.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -128,12 +128,12 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0.55, z: 0, w: 0.37}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.89, y: 6.44}
     newSize: {x: 0.89, y: 6.44}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Size: {x: 0.89, y: 6.44}
