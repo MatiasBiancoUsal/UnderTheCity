@@ -39,6 +39,12 @@ EditorBuildSettings:
     path: Assets/Niveles/Nivel10.unity
     guid: bea8b6cd28a1d5f4b87b1b7e299d58bb
   - enabled: 1
+    path: Assets/Niveles/Nivel11.unity
+    guid: 64a283fd51afacb46b2c51d1d452fd8f
+  - enabled: 1
+    path: Assets/Niveles/Nivel12.unity
+    guid: ef33e0f25f212ed438a4376ec3a3bf22
+  - enabled: 1
     path: Assets/Scenes/Niveles.unity
     guid: b3e58f2bbb3c2d941b18abd580ec594c
   - enabled: 1
