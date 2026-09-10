@@ -52,5 +52,11 @@ TagManager:
   - name: Personajes
     uniqueID: 1110979861
     locked: 0
+  - name: Paredes
+    uniqueID: 3140241391
+    locked: 0
+  - name: Plataformas
+    uniqueID: 1560644843
+    locked: 0
   m_RenderingLayers:
   - Default
