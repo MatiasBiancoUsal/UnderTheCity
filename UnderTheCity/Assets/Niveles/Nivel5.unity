@@ -5019,7 +5019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3312646568621402990, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4615683811785765752, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -12435,7 +12435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3312646568621402990, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7454474822479923933, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
       propertyPath: m_Name

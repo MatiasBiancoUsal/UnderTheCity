@@ -1260,46 +1260,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3312646568621402990, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3312646568621402990, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615683811785765752, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615683811785765752, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615683811785765752, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 4615683811785765752, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.293
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101301293562399176, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1189535530315151480, guid: b77bdfefea7ef964fbfa2384c8102541, type: 3}
-    - target: {fileID: 7101301293562399176, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101301293562399176, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101301293562399176, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7454474822479923933, guid: a0e23923a2a78bd46a36927193523c72, type: 3}
       propertyPath: m_Name
       value: 'Caja '
