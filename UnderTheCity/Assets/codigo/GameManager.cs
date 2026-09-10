@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
         if (textoTiempo != null)
         {
-            textoTiempo.text = $"Tiempo: {tiempoTranscurrido:F2} s";
+            textoTiempo.text = $" {tiempoTranscurrido:F2} S";
         }
 
         if (Keyboard.current.rKey.wasPressedThisFrame)

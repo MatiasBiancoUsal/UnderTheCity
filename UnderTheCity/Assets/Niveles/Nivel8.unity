@@ -2880,8 +2880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d1127caec9dc46942776b2b5c9dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  tiempoAntesDeRomper: 0.2
-  tiempoParaRespawnear: 50
+  tiempoAntesDeRomper: 0.1
+  tiempoParaRespawnear: 10
   gravedadAlCaer: 1
 --- !u!4 &476684512
 Transform:
@@ -4537,8 +4537,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d1127caec9dc46942776b2b5c9dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  tiempoAntesDeRomper: 0.2
-  tiempoParaRespawnear: 50
+  tiempoAntesDeRomper: 0.1
+  tiempoParaRespawnear: 10
   gravedadAlCaer: 1
 --- !u!4 &680564523
 Transform:
@@ -7242,8 +7242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d1127caec9dc46942776b2b5c9dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  tiempoAntesDeRomper: 0.2
-  tiempoParaRespawnear: 50
+  tiempoAntesDeRomper: 0.1
+  tiempoParaRespawnear: 10
   gravedadAlCaer: 1
 --- !u!4 &1050751836
 Transform:
@@ -8336,8 +8336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d1127caec9dc46942776b2b5c9dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  tiempoAntesDeRomper: 0.2
-  tiempoParaRespawnear: 50
+  tiempoAntesDeRomper: 0.1
+  tiempoParaRespawnear: 10
   gravedadAlCaer: 1
 --- !u!4 &1180079734
 Transform:
