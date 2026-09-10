@@ -174,7 +174,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.7247691, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.15, y: 4.33}
     newSize: {x: 2.15, y: 4.33}
@@ -220,7 +220,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.72613645, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.15, y: 4.33}
     newSize: {x: 2.15, y: 4.33}
@@ -4893,7 +4893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel10
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
@@ -8133,7 +8133,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.7427317, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.15, y: 4.33}
     newSize: {x: 2.15, y: 4.33}
@@ -8179,7 +8179,7 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.72613645, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
+    border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2.15, y: 4.33}
     newSize: {x: 2.15, y: 4.33}

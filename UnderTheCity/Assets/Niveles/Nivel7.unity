@@ -7438,7 +7438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel8
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
