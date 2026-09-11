@@ -47,13 +47,12 @@ public class MaquinaCorrer : MonoBehaviour
             if (sprite != null)
             {
                 Color color = sprite.color;
-                color.a = 254f / 255f;
+                color.a = 255f / 255f;
                 sprite.color = color;
             }
         }
 
-        // El fondo de la barra queda siempre visible (pantallita negra).
-        // Solo el relleno (fillAmount) arranca en 0.
+
         if (barra != null)
             barra.fillAmount = 0f;
     }
@@ -93,7 +92,7 @@ public class MaquinaCorrer : MonoBehaviour
 
         alphaInicial = spritesOscuridad.Length > 0 && spritesOscuridad[0] != null
             ? spritesOscuridad[0].color.a
-            : 254f / 255f;
+            : 255f / 255f;
 
         if (barra != null)
             barra.fillAmount = 0f;
@@ -235,13 +234,13 @@ public class MaquinaCorrer : MonoBehaviour
 
             color.a = Mathf.MoveTowards(
                 color.a,
-                254f / 255f,
+                255f / 255f,
                 velocidadOscuridad * Time.deltaTime
             );
 
             sprite.color = color;
 
-            if (color.a < 254f / 255f)
+            if (color.a < 255f / 255f)
             {
                 termino = false;
             }

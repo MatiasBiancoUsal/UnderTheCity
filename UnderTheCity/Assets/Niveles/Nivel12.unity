@@ -714,8 +714,8 @@ MonoBehaviour:
   zonasOscuridad:
   - {fileID: 248570108}
   velocidadOscuridad: 1
-  animatorVagabundo: {fileID: 0}
-  animatorRata: {fileID: 0}
+  animatorVagabundo: {fileID: 1837099375}
+  animatorRata: {fileID: 718841364}
   velocidadAnimacion: 1
   barra: {fileID: 450939636}
 --- !u!212 &72399199
@@ -7454,6 +7454,11 @@ Transform:
   - {fileID: 1396030227}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &718841364 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3172050687056622534, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
+  m_PrefabInstance: {fileID: 680489932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &720796198
 GameObject:
   m_ObjectHideFlags: 0
@@ -18293,6 +18298,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3621435599627312535, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
   m_PrefabInstance: {fileID: 1623367856}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1837099375 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1547267422292157391, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
+  m_PrefabInstance: {fileID: 347601916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842606940
 GameObject:
   m_ObjectHideFlags: 0
@@ -20026,8 +20036,8 @@ MonoBehaviour:
   zonasOscuridad:
   - {fileID: 248570108}
   velocidadOscuridad: 1
-  animatorVagabundo: {fileID: 0}
-  animatorRata: {fileID: 0}
+  animatorVagabundo: {fileID: 1837099375}
+  animatorRata: {fileID: 718841364}
   velocidadAnimacion: 1
   barra: {fileID: 327003367}
 --- !u!212 &2041283894
