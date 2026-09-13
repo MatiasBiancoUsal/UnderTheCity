@@ -321,8 +321,8 @@ MonoBehaviour:
   - {fileID: 1975671443}
   estrellaLlena: {fileID: 4851644199299583258, guid: 4c1f5638b14aaee449cbb4af7418fa1a, type: 3}
   estrellaVacia: {fileID: 6633203956270877855, guid: f651d685be2acc0498a0070c0a9e8d13, type: 3}
-  tiempoParaTresEstrellas: 20
-  tiempoParaDosEstrellas: 35
+  tiempoParaTresEstrellas: 45
+  tiempoParaDosEstrellas: 55
 --- !u!114 &19004867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,7 +6453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 819777409787641370, guid: b33a1fdbcfb5fb54cb430dd40cc5036f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.97
+      value: 12.38
       objectReference: {fileID: 0}
     - target: {fileID: 5303787551511846226, guid: b33a1fdbcfb5fb54cb430dd40cc5036f, type: 3}
       propertyPath: m_LocalScale.x
@@ -6537,7 +6537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7400262264307634777, guid: b33a1fdbcfb5fb54cb430dd40cc5036f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.97
+      value: 12.38
       objectReference: {fileID: 0}
     - target: {fileID: 8791355788204536374, guid: b33a1fdbcfb5fb54cb430dd40cc5036f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9458,7 +9458,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9d3bffe79a3eb6f4b94a41201f986919, type: 3}
+  m_Resource: {fileID: 8300000, guid: 62b41c7391f510344a19ed0ca63c0c98, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

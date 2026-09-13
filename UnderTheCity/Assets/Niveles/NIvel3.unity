@@ -10854,8 +10854,8 @@ MonoBehaviour:
   - {fileID: 1637136943}
   estrellaLlena: {fileID: 4851644199299583258, guid: 4c1f5638b14aaee449cbb4af7418fa1a, type: 3}
   estrellaVacia: {fileID: 6633203956270877855, guid: f651d685be2acc0498a0070c0a9e8d13, type: 3}
-  tiempoParaTresEstrellas: 20
-  tiempoParaDosEstrellas: 35
+  tiempoParaTresEstrellas: 35
+  tiempoParaDosEstrellas: 45
 --- !u!114 &2057106861
 MonoBehaviour:
   m_ObjectHideFlags: 0
