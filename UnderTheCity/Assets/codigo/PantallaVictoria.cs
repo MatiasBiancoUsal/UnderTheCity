@@ -47,7 +47,7 @@ public class PantallaVictoria : MonoBehaviour
 
         if (textoTiempo != null)
         {
-            textoTiempo.text = "Tiempo: " + tiempoFinal.ToString("F2") + " s";
+            textoTiempo.text = tiempoFinal.ToString("F2") + " S";
         }
 
         int cantidadEstrellas = CalcularEstrellas(tiempoFinal);
