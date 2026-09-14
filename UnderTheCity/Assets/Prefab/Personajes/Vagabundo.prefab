@@ -177,6 +177,7 @@ MonoBehaviour:
     m_Bits: 1280
   distanciaSuelo: 0.7
   offsetSuelo: {x: 0, y: -0.5}
+  tiempoAnimacionMuerte: 0.5
 --- !u!61 &4100449406870263846
 BoxCollider2D:
   m_ObjectHideFlags: 0

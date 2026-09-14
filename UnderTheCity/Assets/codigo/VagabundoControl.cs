@@ -23,6 +23,9 @@ public class VagabundoControl : MonoBehaviour
     public float distanciaSuelo = 0.15f;
     public Vector2 offsetSuelo = new Vector2(0f, -0.5f);
 
+    [Header("Animacion de muerte")]
+    public float tiempoAnimacionMuerte = 1.5f;
+
     private Rigidbody2D rb;
     private bool enSuelo;
     private Animator anim;
@@ -32,6 +35,7 @@ public class VagabundoControl : MonoBehaviour
     private float direccionMirando = 1f;
 
     private bool bloqueado = false;
+    private bool estaMuerto = false;
 
     void Start()
     {
@@ -42,6 +46,9 @@ public class VagabundoControl : MonoBehaviour
 
     void Update()
     {
+        if (estaMuerto)
+            return;
+
         enSuelo = DetectarSuelo();
 
         float movimiento = 0f;
@@ -171,6 +178,49 @@ public class VagabundoControl : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(SecuenciaLata());
+    }
+
+    public void Morir()
+    {
+        if (estaMuerto)
+            return;
+
+        StopAllCoroutines();
+        StartCoroutine(SecuenciaMuerte());
+    }
+
+    private IEnumerator SecuenciaMuerte()
+    {
+        estaMuerto = true;
+        bloqueado = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        Transform sprite = anim != null ? anim.transform : transform;
+
+        if (anim != null)
+        {
+            anim.SetTrigger("Morir");
+        }
+
+        float tiempoTranscurrido = 0f;
+
+        while (tiempoTranscurrido < tiempoAnimacionMuerte)
+        {
+            sprite.localScale = new Vector3(
+                direccionMirando > 0 ? escala : -escala,
+                escala,
+                1f
+            );
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (PantallaDerrota.instancia != null)
+        {
+            PantallaDerrota.instancia.Mostrar();
+        }
     }
 
     private void OnDrawGizmos()

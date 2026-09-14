@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class RataControl : MonoBehaviour
@@ -15,6 +16,9 @@ public class RataControl : MonoBehaviour
     public float distanciaSuelo = 0.15f;
     public Vector2 offsetSuelo = new Vector2(0f, -0.5f);
 
+    [Header("Animacion de muerte")]
+    public float tiempoAnimacionMuerte = 1.5f;
+
     private Rigidbody2D rb;
     private bool enSuelo;
     private bool empujandoCaja;
@@ -24,8 +28,10 @@ public class RataControl : MonoBehaviour
 
     private float escalaX = 0.07186557f;
     private float escalaY = 0.08849049f;
+    private float direccionMirando = 1f;
 
     private bool bloqueado = false;
+    private bool estaMuerto = false;
 
     void Start()
     {
@@ -36,6 +42,9 @@ public class RataControl : MonoBehaviour
 
     void Update()
     {
+        if (estaMuerto)
+            return;
+
         enSuelo = DetectarSuelo();
 
         float movimiento = 0f;
@@ -78,10 +87,13 @@ public class RataControl : MonoBehaviour
                 );
             }
         }
+
         Transform sprite = anim != null ? anim.transform : transform;
 
         if (movimiento != 0)
         {
+            direccionMirando = movimiento > 0 ? 1f : -1f;
+
             sprite.localScale = new Vector3(
                 movimiento > 0 ? escalaX : -escalaX,
                 escalaY,
@@ -132,6 +144,49 @@ public class RataControl : MonoBehaviour
     public void DesbloquearParaMaquina()
     {
         bloqueado = false;
+    }
+
+    public void Morir()
+    {
+        if (estaMuerto)
+            return;
+
+        StopAllCoroutines();
+        StartCoroutine(SecuenciaMuerte());
+    }
+
+    private IEnumerator SecuenciaMuerte()
+    {
+        estaMuerto = true;
+        bloqueado = true;
+
+        rb.linearVelocity = Vector2.zero;
+
+        Transform sprite = anim != null ? anim.transform : transform;
+
+        if (anim != null)
+        {
+            anim.SetTrigger("Morir");
+        }
+
+        float tiempoTranscurrido = 0f;
+
+        while (tiempoTranscurrido < tiempoAnimacionMuerte)
+        {
+            sprite.localScale = new Vector3(
+                direccionMirando > 0 ? escalaX : -escalaX,
+                escalaY,
+                1f
+            );
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (PantallaDerrota.instancia != null)
+        {
+            PantallaDerrota.instancia.Mostrar();
+        }
     }
 
     private void OnCollisionStay2D(Collision2D collision)

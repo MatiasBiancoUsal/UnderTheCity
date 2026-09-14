@@ -152,10 +152,9 @@ public class Enemigo : MonoBehaviour
         if (!collision.gameObject.CompareTag("Vagabundo"))
             return;
 
-
         if (mataJugadorAlColisionar)
         {
-            MostrarPantallaDerrota();
+            MatarVagabundo(collision.gameObject);
             return;
         }
 
@@ -172,9 +171,15 @@ public class Enemigo : MonoBehaviour
         }
     }
 
-    private void MostrarPantallaDerrota()
+    private void MatarVagabundo(GameObject jugador)
     {
-        if (PantallaDerrota.instancia != null)
+        VagabundoControl vagabundo = jugador.GetComponent<VagabundoControl>();
+
+        if (vagabundo != null)
+        {
+            vagabundo.Morir();
+        }
+        else if (PantallaDerrota.instancia != null)
         {
             PantallaDerrota.instancia.Mostrar();
         }
