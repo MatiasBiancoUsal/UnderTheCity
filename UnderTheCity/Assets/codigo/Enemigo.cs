@@ -1,5 +1,4 @@
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
 public class Enemigo : MonoBehaviour
 {
@@ -20,6 +19,9 @@ public class Enemigo : MonoBehaviour
     [Header("COMPORTAMIENTO ESPECIAL")]
     public bool mataJugadorAlColisionar = false;
 
+    [Header("ANIMACION")]
+    public Animator animator;
+
     private bool yendoAB = true;
     private bool detenido = false;
 
@@ -34,6 +36,11 @@ public class Enemigo : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (animator == null)
+        {
+            animator = GetComponentInChildren<Animator>();
+        }
 
         if (puntoA != null)
             posicionA = puntoA.position;
@@ -140,11 +147,21 @@ public class Enemigo : MonoBehaviour
     public void Parar()
     {
         detenido = true;
+
+        if (animator != null)
+        {
+            animator.SetBool("Detectando", true);
+        }
     }
 
     public void Reanudar()
     {
         detenido = false;
+
+        if (animator != null)
+        {
+            animator.SetBool("Detectando", false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -182,10 +199,6 @@ public class Enemigo : MonoBehaviour
         else if (PantallaDerrota.instancia != null)
         {
             PantallaDerrota.instancia.Mostrar();
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró PantallaDerrota en la escena.");
         }
     }
 }

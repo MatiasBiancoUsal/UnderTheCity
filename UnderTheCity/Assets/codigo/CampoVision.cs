@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
+using Debug = UnityEngine.Debug;
 
 public class CampoVision : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class CampoVision : MonoBehaviour
 
     [Header("BARRA DE DETECCION")]
     public GameObject barraDeteccion;
-    public UnityEngine.UI.Image barra;
+    public Image barra;
 
     private float tiempoMirando = 0f;
 
@@ -76,7 +78,7 @@ public class CampoVision : MonoBehaviour
         {
             jugadorDetectado = true;
 
-            MostrarPantallaDerrota();
+            MatarJugadoresDetectados();
         }
     }
 
@@ -184,6 +186,30 @@ public class CampoVision : MonoBehaviour
         return golpe.collider != null;
     }
 
+    void MatarJugadoresDetectados()
+    {
+        foreach (GameObject jugador in jugadoresDentro)
+        {
+            VagabundoControl vagabundo = jugador.GetComponent<VagabundoControl>();
+
+            if (vagabundo != null)
+            {
+                vagabundo.Morir();
+                continue;
+            }
+
+            RataControl rata = jugador.GetComponent<RataControl>();
+
+            if (rata != null)
+            {
+                rata.Morir();
+                continue;
+            }
+
+            MostrarPantallaDerrota();
+        }
+    }
+
     void MostrarPantallaDerrota()
     {
         if (PantallaDerrota.instancia != null)
@@ -192,7 +218,7 @@ public class CampoVision : MonoBehaviour
         }
         else
         {
-            UnityEngine.Debug.LogError(
+            Debug.LogError(
                 "No se encontró una PantallaDerrota en la escena. " +
                 "Asegurate de tener el objeto con el script PantallaDerrota."
             );
