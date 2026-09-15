@@ -1287,6 +1287,7 @@ MonoBehaviour:
     m_Bits: 1024
   distanciaSuelo: 0.58
   offsetSuelo: {x: 0, y: -0.5}
+  tiempoAnimacionMuerte: 1.5
 --- !u!4 &261897793
 Transform:
   m_ObjectHideFlags: 0
@@ -2701,8 +2702,8 @@ MonoBehaviour:
   - {fileID: 940859948}
   estrellaLlena: {fileID: 4851644199299583258, guid: 4c1f5638b14aaee449cbb4af7418fa1a, type: 3}
   estrellaVacia: {fileID: 6633203956270877855, guid: f651d685be2acc0498a0070c0a9e8d13, type: 3}
-  tiempoParaTresEstrellas: 20
-  tiempoParaDosEstrellas: 35
+  tiempoParaTresEstrellas: 55
+  tiempoParaDosEstrellas: 65
 --- !u!114 &690007940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,6 +3678,7 @@ MonoBehaviour:
     m_Bits: 3072
   distanciaSuelo: 0.11
   offsetSuelo: {x: 0, y: -0.5}
+  tiempoAnimacionMuerte: 1.5
 --- !u!61 &896615577
 BoxCollider2D:
   m_ObjectHideFlags: 0
