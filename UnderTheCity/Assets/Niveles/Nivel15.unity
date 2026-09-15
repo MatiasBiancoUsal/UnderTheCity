@@ -3306,7 +3306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: Video Final
+  siguienteNivel: menu
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
