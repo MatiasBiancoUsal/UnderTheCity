@@ -3786,6 +3786,7 @@ MonoBehaviour:
   empiezaMirandoDerecha: 1
   puedeMorir: 1
   mataJugadorAlColisionar: 0
+  animator: {fileID: 0}
 --- !u!212 &417819223
 SpriteRenderer:
   serializedVersion: 2
@@ -4632,6 +4633,7 @@ MonoBehaviour:
   empiezaMirandoDerecha: 1
   puedeMorir: 0
   mataJugadorAlColisionar: 1
+  animator: {fileID: 0}
 --- !u!1 &562279069
 GameObject:
   m_ObjectHideFlags: 0
@@ -14233,7 +14235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel12
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
