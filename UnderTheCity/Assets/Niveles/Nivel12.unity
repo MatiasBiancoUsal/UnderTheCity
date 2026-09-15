@@ -4894,6 +4894,7 @@ MonoBehaviour:
   empiezaMirandoDerecha: 1
   puedeMorir: 1
   mataJugadorAlColisionar: 0
+  animator: {fileID: 0}
 --- !u!212 &417819223
 SpriteRenderer:
   serializedVersion: 2
@@ -6232,6 +6233,7 @@ MonoBehaviour:
   empiezaMirandoDerecha: 1
   puedeMorir: 0
   mataJugadorAlColisionar: 1
+  animator: {fileID: 0}
 --- !u!1 &562279069
 GameObject:
   m_ObjectHideFlags: 0
@@ -14367,7 +14369,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.08547068, y: 0}
+  m_Offset: {x: -0.000854969, y: 0}
   m_SpriteTilingProperty:
     border: {x: 1.16, y: 0, z: 0.56, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14377,7 +14379,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 28.518707, y: 0.99}
+  m_Size: {x: 31.598717, y: 0.99}
   m_EdgeRadius: 0
 --- !u!212 &1400667026
 SpriteRenderer:
