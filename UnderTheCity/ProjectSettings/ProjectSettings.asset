@@ -696,11 +696,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 48a98c0a-0cb3-41af-89a2-dd01e1559323
+  cloudProjectId: 351cd386-22d6-49c9-b914-2362e469c70d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: UnderTheCity
-  organizationId: pipesaini
+  projectName: Under the city
+  organizationId: usal-2026-not-home
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
