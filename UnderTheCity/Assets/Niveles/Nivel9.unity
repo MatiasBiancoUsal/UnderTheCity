@@ -7189,6 +7189,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106011863}
   m_CullTransparentMesh: 1
+--- !u!1 &1108362605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1108362607}
+  - component: {fileID: 1108362606}
+  m_Layer: 0
+  m_Name: AnalyticsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1108362606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108362605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee594a017fa60e04aa9dba0758a2fd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &1108362607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108362605}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02516, y: 3.77478, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126855600
 GameObject:
   m_ObjectHideFlags: 0
@@ -10807,6 +10851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000421cd6f990884ca80aee00f8ffc44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  canvasTerminos: {fileID: 0}
 --- !u!4 &1783112651
 Transform:
   m_ObjectHideFlags: 0
@@ -12502,6 +12547,7 @@ MonoBehaviour:
     m_Bits: 3072
   distanciaSuelo: 0.11
   offsetSuelo: {x: 0, y: -0.5}
+  tiempoAnimacionMuerte: 1.5
 --- !u!61 &1987914071
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12979,6 +13025,7 @@ MonoBehaviour:
     m_Bits: 3328
   distanciaSuelo: 0.8
   offsetSuelo: {x: 0, y: -0.5}
+  tiempoAnimacionMuerte: 1.5
 --- !u!4 &2045945339
 Transform:
   m_ObjectHideFlags: 0
@@ -13701,6 +13748,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1377632766}
   - {fileID: 910261606}
+  - {fileID: 1108362607}
   - {fileID: 1494962594}
   - {fileID: 894575128}
   - {fileID: 191833667}
