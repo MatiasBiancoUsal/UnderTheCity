@@ -1,15 +1,28 @@
 using UnityEngine;
 using Unity.Services.Core;
 using UnityEngine.UnityConsent;
-using Unity.Services.Analytics;
+
 
 public class iniciarAnalytics : MonoBehaviour
 {
     async void Start()
     {
-        await UnityServices.InitializeAsync();
+        try
+        {
+            await UnityServices.InitializeAsync();
+
+            if (PlayerPrefs.GetInt("TerminosAceptados", 0) == 1)
+            {
+                RecoleccionDatos(true);
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error al iniciar Unity Services: " + e.Message);
+        }
     }
 
+ 
     public void RecoleccionDatos(bool consentimiento)
     {
         ConsentState estadoConsentimiento = new ConsentState
@@ -18,7 +31,7 @@ public class iniciarAnalytics : MonoBehaviour
             AdsIntent = ConsentStatus.Denied
         };
 
-        // Avisa a Unity cuál es la decisión del usuario
+      
         EndUserConsent.SetConsentState(estadoConsentimiento);
     }
 }
