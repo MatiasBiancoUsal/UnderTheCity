@@ -28,13 +28,22 @@ public class AnalyticsManager : MonoBehaviour
     {
         try
         {
-            if (UnityServices.State != ServicesInitializationState.Initialized)
+            if (UnityServices.State == ServicesInitializationState.Uninitialized)
             {
                 await UnityServices.InitializeAsync();
             }
+            else
+            {
+                while (UnityServices.State == ServicesInitializationState.Initializing)
+                {
+                    await Task.Yield();
+                }
+            }
 
-            serviciosListos = true;
-            Debug.Log("AnalyticsManager: servicios inicializados.");
+            serviciosListos = UnityServices.State == ServicesInitializationState.Initialized;
+
+            if (serviciosListos)
+                Debug.Log("AnalyticsManager: servicios inicializados.");
         }
         catch (Exception e)
         {
@@ -59,11 +68,12 @@ public class AnalyticsManager : MonoBehaviour
             return;
 
         CustomEvent evento = new CustomEvent("NivelIniciado")
-    {
-        { "nombreNivel", nombreNivel }
-    };
+        {
+            { "nombreNivel", nombreNivel }
+        };
 
         AnalyticsService.Instance.RecordEvent(evento);
+        AnalyticsService.Instance.Flush(); 
 
         Debug.Log("Evento NivelIniciado. nombreNivel: " + nombreNivel);
     }
@@ -80,16 +90,17 @@ public class AnalyticsManager : MonoBehaviour
             return;
 
         CustomEvent evento = new CustomEvent("NivelCompletado")
-    {
-        { "nombreNivel", nombreNivel },
-        { "tiempoSegundos", tiempoSegundos },
-        { "muertes", muertes },
-        { "muertesVagabundo", muertesVagabundo },
-        { "muertesRata", muertesRata },
-        { "puntaje", puntaje }
-    };
+        {
+            { "nombreNivel", nombreNivel },
+            { "tiempoSegundos", tiempoSegundos },
+            { "muertes", muertes },
+            { "muertesVagabundo", muertesVagabundo },
+            { "muertesRata", muertesRata },
+            { "puntaje", puntaje }
+        };
 
         AnalyticsService.Instance.RecordEvent(evento);
+        AnalyticsService.Instance.Flush();
 
         Debug.Log("Evento NivelCompletado. Nivel: " + nombreNivel);
     }
@@ -106,16 +117,17 @@ public class AnalyticsManager : MonoBehaviour
             return;
 
         CustomEvent evento = new CustomEvent("JugadorMurio")
-    {
-        { "personaje", personaje },
-        { "nombreNivel", nombreNivel },
-        { "zona", zona },
-        { "posicionX", posicionX },
-        { "posicionY", posicionY },
-        { "muertesPersonaje", muertesPersonaje }
-    };
+        {
+            { "personaje", personaje },
+            { "nombreNivel", nombreNivel },
+            { "zona", zona },
+            { "posicionX", posicionX },
+            { "posicionY", posicionY },
+            { "muertesPersonaje", muertesPersonaje }
+        };
 
         AnalyticsService.Instance.RecordEvent(evento);
+        AnalyticsService.Instance.Flush();
 
         Debug.Log(
             "Evento JugadorMurio. Personaje: " + personaje +
@@ -133,15 +145,15 @@ public class AnalyticsManager : MonoBehaviour
             return;
 
         CustomEvent evento = new CustomEvent("Derrota")
-    {
-        { "nombreNivel", nombreNivel },
-        { "tiempoSegundos", tiempoSegundos },
-        { "muertes", muertes }
-    };
+        {
+            { "nombreNivel", nombreNivel },
+            { "tiempoSegundos", tiempoSegundos },
+            { "muertes", muertes }
+        };
 
         AnalyticsService.Instance.RecordEvent(evento);
+        AnalyticsService.Instance.Flush();
 
         Debug.Log("Evento Derrota. Nivel: " + nombreNivel);
     }
-
 }
