@@ -1,5 +1,7 @@
+
 using UnityEngine;
-using Debug = UnityEngine.Debug;
+using UnityEngine.SceneManagement;
+
 
 public class ZonaMuerte : MonoBehaviour
 {
@@ -14,6 +16,12 @@ public class ZonaMuerte : MonoBehaviour
             MatarRata(collision.gameObject);
         }
     }
+    private void Start()
+    {
+         nivActualName = SceneManager.GetActiveScene().name;
+
+    }
+    string nivActualName;
 
     private void MatarVagabundo(GameObject jugador)
     {
@@ -22,11 +30,25 @@ public class ZonaMuerte : MonoBehaviour
         if (vagabundo != null)
         {
             vagabundo.Morir();
+            int numeroMuertes = PlayerPrefs.GetInt("MV",0);
+            PlayerPrefs.SetInt("MV",numeroMuertes+1);
+  
+
+
+            AnalyticsManager.Instance.RegistrarJugadorMurio("vagabundo",
+                nivActualName,
+                gameObject.tag,
+                vagabundo.gameObject.transform.position.x,
+                vagabundo.gameObject.transform.position.y,
+                PlayerPrefs.GetInt("MV", 0));
+
+
         }
         else
         {
             MostrarPantallaDerrota();
         }
+
     }
 
     private void MatarRata(GameObject jugador)
@@ -36,6 +58,18 @@ public class ZonaMuerte : MonoBehaviour
         if (rata != null)
         {
             rata.Morir();
+            int numeroMuertes = PlayerPrefs.GetInt("MR", 0);
+            PlayerPrefs.SetInt("MR", numeroMuertes + 1);
+         
+
+
+            AnalyticsManager.Instance.RegistrarJugadorMurio("rata",
+                nivActualName,
+                gameObject.tag,
+                rata.gameObject.transform.position.x,
+                rata.gameObject.transform.position.y,
+                PlayerPrefs.GetInt("MR", 0));
+
         }
         else
         {
@@ -54,4 +88,5 @@ public class ZonaMuerte : MonoBehaviour
             Debug.LogWarning("No se encontró PantallaDerrota en la escena.");
         }
     }
+
 }

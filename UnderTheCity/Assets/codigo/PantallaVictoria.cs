@@ -54,6 +54,9 @@ public class PantallaVictoria : MonoBehaviour
         MostrarEstrellas(cantidadEstrellas);
 
         Time.timeScale = 0f;
+
+        GameManager.instancia.cantidadEstrellas = cantidadEstrellas;
+
     }
 
     private int CalcularEstrellas(float tiempoFinal)

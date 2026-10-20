@@ -1745,8 +1745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee594a017fa60e04aa9dba0758a2fd10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objetoVictoria: {fileID: 690007937}
-  puntaje: 0
 --- !u!4 &424749475
 Transform:
   m_ObjectHideFlags: 0
@@ -1937,6 +1935,7 @@ MonoBehaviour:
   quesosNecesarios: 2
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1418500229}
+  cantidadEstrellas: 0
 --- !u!4 &452662873
 Transform:
   m_ObjectHideFlags: 0
@@ -2104,7 +2103,7 @@ GameObject:
   - component: {fileID: 494357686}
   m_Layer: 0
   m_Name: Acido
-  m_TagString: Untagged
+  m_TagString: Acido
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

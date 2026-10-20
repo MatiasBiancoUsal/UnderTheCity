@@ -27,6 +27,10 @@ public class GameManager : MonoBehaviour
     public float tiempoTranscurrido = 0f;
     public TMP_Text textoTiempo;
 
+    [Header("cantidadEstrellas")]
+    public int cantidadEstrellas;
+
+
     private bool yaCargo = false;
 
     private void Awake()
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour
         }
 
         int nivelActual = SceneManager.GetActiveScene().buildIndex;
+        string nivActualName = SceneManager.GetActiveScene().name;
 
         PlayerPrefs.SetInt(
             "NivelDesbloqueado",
@@ -92,6 +97,13 @@ public class GameManager : MonoBehaviour
         if (PantallaVictoria.instancia != null)
         {
             PantallaVictoria.instancia.Mostrar(tiempoTranscurrido, siguienteNivel);
+            AnalyticsManager.Instance.RegistrarNivelCompletado(nivActualName,
+                tiempoTranscurrido,
+                PlayerPrefs.GetInt("MV", 0)+ PlayerPrefs.GetInt("MR", 0),
+                PlayerPrefs.GetInt("MV", 0),
+                PlayerPrefs.GetInt("MR", 0),
+                cantidadEstrellas);
+
         }
         else
         {

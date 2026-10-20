@@ -9,6 +9,7 @@ TagManager:
   - Ventilador
   - Vagabundo
   - Caja
+  - Acido
   layers:
   - Default
   - TransparentFX
