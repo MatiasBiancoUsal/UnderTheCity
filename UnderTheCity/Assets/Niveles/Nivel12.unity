@@ -6098,7 +6098,7 @@ GameObject:
   - component: {fileID: 547746738}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8626,7 +8626,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.74448895, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -8636,7 +8636,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.13262033, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &886394361
 BoxCollider2D:
@@ -10008,6 +10008,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Acido_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
+      propertyPath: m_TagString
+      value: "Vac\xEDo"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10477,7 +10481,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.7510624, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -10487,7 +10491,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.11947352, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &1127793119
 BoxCollider2D:
@@ -12779,7 +12783,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.7247691, y: 7.9832087}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -12789,7 +12793,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.17206001, y: 20.29642}
   m_EdgeRadius: 0
 --- !u!61 &1242613613
 BoxCollider2D:
@@ -13108,7 +13112,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3494762611221455427, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Size.x
-      value: 2.7722917
+      value: 2.3485558
       objectReference: {fileID: 0}
     - target: {fileID: 3494762611221455427, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_SortingOrder
@@ -13124,11 +13128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621435599627312535, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.003
+      value: 2.97083
       objectReference: {fileID: 0}
     - target: {fileID: 3621435599627312535, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1
+      value: 10.55
       objectReference: {fileID: 0}
     - target: {fileID: 3621435599627312535, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13164,23 +13168,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3747949100093777632, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Size.x
-      value: 2.444729
+      value: 2.2226317
       objectReference: {fileID: 0}
     - target: {fileID: 3747949100093777632, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Size.y
-      value: 0.32637525
+      value: 0.32132792
       objectReference: {fileID: 0}
     - target: {fileID: 3747949100093777632, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Offset.x
-      value: -0.008382201
+      value: -0.043715835
       objectReference: {fileID: 0}
     - target: {fileID: 3747949100093777632, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Offset.y
-      value: 0.29394662
+      value: 0.29142296
       objectReference: {fileID: 0}
     - target: {fileID: 3747949100093777632, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.7722917
+      value: 2.3485558
       objectReference: {fileID: 0}
     - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Name
@@ -17460,7 +17464,7 @@ GameObject:
   - component: {fileID: 1631850197}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17677,7 +17681,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.7247691, y: -5.6595826}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -17687,7 +17691,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.17206001, y: 15.649163}
   m_EdgeRadius: 0
 --- !u!61 &1639295948
 BoxCollider2D:
@@ -18782,6 +18786,7 @@ MonoBehaviour:
   quesosNecesarios: 3
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
+  cantidadEstrellas: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0
@@ -20125,7 +20130,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.75106215, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -20135,7 +20140,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.119473994, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &2018174898
 BoxCollider2D:

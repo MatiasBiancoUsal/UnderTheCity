@@ -4358,7 +4358,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.72613645, y: 0.48571372}
+  m_Offset: {x: 0.7146348, y: 1.1593378}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -4368,7 +4368,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16932392, y: 3.3585725}
+  m_Size: {x: 0.1923272, y: 4.70582}
   m_EdgeRadius: 0
 --- !u!212 &330864916
 SpriteRenderer:
@@ -5553,7 +5553,7 @@ GameObject:
   - component: {fileID: 417819218}
   m_Layer: 15
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6892,7 +6892,7 @@ GameObject:
   - component: {fileID: 547746738}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9293,7 +9293,7 @@ GameObject:
   - component: {fileID: 833953048}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10300,7 +10300,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.2116632, y: -0.13196325}
+  m_Offset: {x: -1.2116632, y: -1.2138292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10310,7 +10310,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17882347, y: 2.8660736}
+  m_Size: {x: 0.17882347, y: 5.029806}
   m_EdgeRadius: 0
 --- !u!212 &905853145
 SpriteRenderer:
@@ -11467,6 +11467,10 @@ PrefabInstance:
     - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Name
       value: Acido_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
+      propertyPath: m_TagString
+      value: "Vac\xEDo"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12958,7 +12962,7 @@ GameObject:
   - component: {fileID: 1153113869}
   m_Layer: 15
   m_Name: CampoVision Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18714,7 +18718,7 @@ GameObject:
   - component: {fileID: 1482458339}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20070,7 +20074,7 @@ GameObject:
   - component: {fileID: 1631850197}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20287,7 +20291,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0.39480895}
+  m_Offset: {x: -0.7632351, y: 0.394809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -20297,7 +20301,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206001, y: 3.540382}
+  m_Size: {x: 0.09512806, y: 3.540382}
   m_EdgeRadius: 0
 --- !u!61 &1639295948
 BoxCollider2D:
@@ -21526,6 +21530,7 @@ MonoBehaviour:
   quesosNecesarios: 3
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
+  cantidadEstrellas: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0

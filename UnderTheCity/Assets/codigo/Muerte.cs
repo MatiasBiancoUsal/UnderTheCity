@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,12 +26,14 @@ public class ZonaMuerte : MonoBehaviour
     {
         VagabundoControl vagabundo = jugador.GetComponent<VagabundoControl>();
 
+
         if (vagabundo != null)
         {
             vagabundo.Morir();
             int numeroMuertes = PlayerPrefs.GetInt("MV",0);
             PlayerPrefs.SetInt("MV",numeroMuertes+1);
-  
+            RegistrarDerrota();
+
 
 
             AnalyticsManager.Instance.RegistrarJugadorMurio("vagabundo",
@@ -41,7 +42,6 @@ public class ZonaMuerte : MonoBehaviour
                 vagabundo.gameObject.transform.position.x,
                 vagabundo.gameObject.transform.position.y,
                 PlayerPrefs.GetInt("MV", 0));
-
 
         }
         else
@@ -60,7 +60,7 @@ public class ZonaMuerte : MonoBehaviour
             rata.Morir();
             int numeroMuertes = PlayerPrefs.GetInt("MR", 0);
             PlayerPrefs.SetInt("MR", numeroMuertes + 1);
-         
+            RegistrarDerrota();
 
 
             AnalyticsManager.Instance.RegistrarJugadorMurio("rata",
@@ -76,6 +76,16 @@ public class ZonaMuerte : MonoBehaviour
             MostrarPantallaDerrota();
         }
     }
+
+    private void RegistrarDerrota()
+    {
+        AnalyticsManager.Instance.RegistrarDerrota(
+            nivActualName,
+            GameManager.instancia.tiempoTranscurrido,
+            PlayerPrefs.GetInt("MV", 0) + PlayerPrefs.GetInt("MR", 0)
+        );
+    }
+
 
     private void MostrarPantallaDerrota()
     {

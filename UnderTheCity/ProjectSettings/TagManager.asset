@@ -10,6 +10,9 @@ TagManager:
   - Vagabundo
   - Caja
   - Acido
+  - "Vac\xEDo"
+  - "Polic\xEDa"
+  - Gato
   layers:
   - Default
   - TransparentFX

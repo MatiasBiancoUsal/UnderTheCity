@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 494357686}
   m_Layer: 0
   m_Name: Acido
-  m_TagString: Acido
+  m_TagString: "Vac\xEDo"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

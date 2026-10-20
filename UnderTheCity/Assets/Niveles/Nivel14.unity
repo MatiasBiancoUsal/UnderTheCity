@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 63030595}
   m_Layer: 15
   m_Name: CampoVision Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 231338273}
   m_Layer: 15
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1964,7 +1964,7 @@ GameObject:
   - component: {fileID: 248257752}
   m_Layer: 15
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2787,7 +2787,7 @@ GameObject:
   - component: {fileID: 301987317}
   m_Layer: 15
   m_Name: CampoVision Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6749,7 +6749,7 @@ GameObject:
   - component: {fileID: 733991906}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8539,6 +8539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Acido_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
+      propertyPath: m_TagString
+      value: "Vac\xEDo"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8754,7 +8758,7 @@ GameObject:
   - component: {fileID: 1117918313}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9281,7 +9285,7 @@ GameObject:
   - component: {fileID: 1150482469}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16552,6 +16556,7 @@ MonoBehaviour:
   quesosNecesarios: 3
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
+  cantidadEstrellas: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0
@@ -18296,7 +18301,7 @@ GameObject:
   - component: {fileID: 2008593721}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

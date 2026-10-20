@@ -2346,7 +2346,7 @@ Transform:
   m_GameObject: {fileID: 360765572}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51.3325, y: 27.13, z: 0}
+  m_LocalPosition: {x: -53.4966, y: 27.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2386,17 +2386,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.044579506, y: 0}
+  m_Offset: {x: -1.123064, y: 0}
   m_SpriteTilingProperty:
     border: {x: 1.16, y: 0, z: 0.56, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6.09, y: 0.99}
-    newSize: {x: 26.504446, y: 0.99}
+    newSize: {x: 22.176258, y: 0.99}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.564821, y: 0.99}
+  m_Size: {x: 24.407852, y: 0.99}
   m_EdgeRadius: 0
 --- !u!212 &360765575
 SpriteRenderer:
@@ -2452,7 +2452,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 26.504446, y: 0.99}
+  m_Size: {x: 22.176258, y: 0.99}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3313,6 +3313,7 @@ MonoBehaviour:
   quesosNecesarios: 3
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1418500229}
+  cantidadEstrellas: 0
 --- !u!4 &452662873
 Transform:
   m_ObjectHideFlags: 0
@@ -6275,7 +6276,7 @@ GameObject:
   - component: {fileID: 910111552}
   m_Layer: 12
   m_Name: "CampoVision polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9948,7 +9949,7 @@ GameObject:
   - component: {fileID: 1310056513}
   m_Layer: 15
   m_Name: Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12124,7 +12125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5576041947804481642, guid: d6788220803b90f448d1dd02029586a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.43
+      value: -5.93
       objectReference: {fileID: 0}
     - target: {fileID: 5576041947804481642, guid: d6788220803b90f448d1dd02029586a0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12391,6 +12392,10 @@ PrefabInstance:
     - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
       propertyPath: m_Name
       value: Acido_0 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5389898701964584092, guid: cee0d94a80c18f14aa554121ece5d50a, type: 3}
+      propertyPath: m_TagString
+      value: "Vac\xEDo"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14997,7 +15002,7 @@ GameObject:
   - component: {fileID: 1727292150}
   m_Layer: 15
   m_Name: CampoVision Gato
-  m_TagString: Untagged
+  m_TagString: Gato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16470,7 +16475,7 @@ GameObject:
   - component: {fileID: 1881889352}
   m_Layer: 12
   m_Name: "Polic\xEDa"
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3817,6 +3817,7 @@ MonoBehaviour:
   quesosNecesarios: 3
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 211902681}
+  cantidadEstrellas: 0
 --- !u!4 &740818095
 Transform:
   m_ObjectHideFlags: 0
@@ -6059,7 +6060,7 @@ GameObject:
   - component: {fileID: 1170120022}
   m_Layer: 0
   m_Name: Acido
-  m_TagString: Untagged
+  m_TagString: "Vac\xEDo"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using UnityEngine;
-using Unity.Services.Core;
 using Unity.Services.Analytics;
+using Unity.Services.Core;
+using UnityEngine;
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -174,6 +174,10 @@ public class AnalyticsManager : MonoBehaviour
         AnalyticsService.Instance.RecordEvent(evento);
         AnalyticsService.Instance.Flush();
 
-        Debug.Log("Evento Derrota. Nivel: " + nombreNivel);
+        Debug.Log("Evento Derrota. nombreNivel: " + nombreNivel);
+        Debug.Log("Evento Derrota. tiempoSegundos: " + tiempoSegundos);
+        Debug.Log("Evento Derrota. muertes: " + muertes);
+
+
     }
 }

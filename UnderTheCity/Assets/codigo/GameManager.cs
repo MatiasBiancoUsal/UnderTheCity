@@ -103,12 +103,13 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.GetInt("MV", 0),
                 PlayerPrefs.GetInt("MR", 0),
                 cantidadEstrellas);
-
+            
         }
         else
         {
             Debug.LogWarning("No se encontró PantallaVictoria en la escena, cargando nivel directo.");
             SceneManager.LoadScene(siguienteNivel);
         }
+
     }
 }
