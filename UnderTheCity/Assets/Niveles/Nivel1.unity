@@ -1285,7 +1285,7 @@ MonoBehaviour:
   layerSuelo:
     serializedVersion: 2
     m_Bits: 1024
-  distanciaSuelo: 0.58
+  distanciaSuelo: 0.65
   offsetSuelo: {x: 0, y: -0.5}
   tiempoAnimacionMuerte: 1.5
 --- !u!4 &261897793
