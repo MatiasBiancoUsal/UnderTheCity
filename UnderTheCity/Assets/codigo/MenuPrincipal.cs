@@ -28,10 +28,15 @@ public class MenuPrincipal : MonoBehaviour
         SceneManager.LoadScene("Controles");
     }
 
-    public void Salir()
+    public GameObject panelCreditos;
+
+    public void AbrirCreditos()
     {
-        Debug.Log("Saliendo del juego...");
-        Application.Quit();
+        panelCreditos.SetActive(true);
     }
 
+    public void CerrarCreditos()
+    {
+        panelCreditos.SetActive(false);
+    }
 }
