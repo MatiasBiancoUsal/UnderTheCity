@@ -5836,7 +5836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.77
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10350,6 +10350,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Size.y
+      value: 9.937246
+      objectReference: {fileID: 0}
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Offset.y
+      value: 4.705289
+      objectReference: {fileID: 0}
     - target: {fileID: 3181914322896481284, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.526
@@ -10396,11 +10404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: fuerza
-      value: 45
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: velocidadMaxima
-      value: 25
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

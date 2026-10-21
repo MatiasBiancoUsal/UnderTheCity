@@ -10921,11 +10921,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.38
+      value: -18.02
       objectReference: {fileID: 0}
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.98
+      value: 14.987
       objectReference: {fileID: 0}
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11475,8 +11475,16 @@ PrefabInstance:
       value: 2.0042233
       objectReference: {fileID: 0}
     - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Size.y
+      value: 13.620167
+      objectReference: {fileID: 0}
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: m_Offset.x
-      value: 0.07122156
+      value: 0.07122159
+      objectReference: {fileID: 0}
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Offset.y
+      value: 6.54675
       objectReference: {fileID: 0}
     - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
@@ -11544,11 +11552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: fuerza
-      value: 70
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: velocidadMaxima
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13988,7 +13996,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.81
+      value: -16.77
       objectReference: {fileID: 0}
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19355,6 +19363,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Size.y
+      value: 5.870638
+      objectReference: {fileID: 0}
+    - target: {fileID: 715993620221436577, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
+      propertyPath: m_Offset.y
+      value: 2.6719856
+      objectReference: {fileID: 0}
     - target: {fileID: 3181914322896481284, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.35
@@ -19401,11 +19417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: fuerza
-      value: 150
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5932607618541712098, guid: bcaf4addb9385344b8fe709cb2fbe69d, type: 3}
       propertyPath: velocidadMaxima
-      value: 25
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
