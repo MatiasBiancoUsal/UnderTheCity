@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 927f60ae8bc71a74b86a02a1aab22771
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7008038831203253337
+    second: grafitis-09_0
+  - first:
+      213: 8618232532280703997
+    second: grafitis-09_1
+  - first:
+      213: 3556362852914760660
+    second: grafitis-09_2
+  - first:
+      213: -2269377066482704718
+    second: grafitis-09_3
+  - first:
+      213: -1795381233452579431
+    second: grafitis-09_4
+  - first:
+      213: -3133546075735696951
+    second: grafitis-09_5
+  - first:
+      213: 8547841510931349034
+    second: grafitis-09_6
+  - first:
+      213: -2899580658528058790
+    second: grafitis-09_7
+  - first:
+      213: -7020675114173560767
+    second: grafitis-09_8
+  - first:
+      213: 1300624653018700724
+    second: grafitis-09_9
+  - first:
+      213: -2543808578368837673
+    second: grafitis-09_10
+  - first:
+      213: -391303285036571315
+    second: grafitis-09_11
+  - first:
+      213: 8951327122963778725
+    second: grafitis-09_12
+  - first:
+      213: -1811002933148113155
+    second: grafitis-09_13
+  - first:
+      213: 9041500111974056391
+    second: grafitis-09_14
+  - first:
+      213: -2579009281193392008
+    second: grafitis-09_15
+  - first:
+      213: 6946760375440091084
+    second: grafitis-09_16
+  - first:
+      213: 5293883391621447508
+    second: grafitis-09_17
+  - first:
+      213: 451598808614218848
+    second: grafitis-09_18
+  - first:
+      213: 804418514243197623
+    second: grafitis-09_19
+  - first:
+      213: -7558908287932370026
+    second: grafitis-09_20
+  - first:
+      213: -5303892860605448232
+    second: grafitis-09_21
+  - first:
+      213: -1375189878085672087
+    second: grafitis-09_22
+  - first:
+      213: -9102757732518898689
+    second: grafitis-09_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grafitis-09_0
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1061
+        width: 259
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a38cfd20d17ebe90800000000000000
+      internalID: -7008038831203253337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_1
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 1143
+        width: 176
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb7e46a3dc1a9770800000000000000
+      internalID: 8618232532280703997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_2
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 805
+        width: 612
+        height: 845
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db016c1c2dba5130800000000000000
+      internalID: 3556362852914760660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_3
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 1197
+        width: 210
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be51eae49d8180e0800000000000000
+      internalID: -2269377066482704718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_4
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 1215
+        width: 197
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99508afc7468517e0800000000000000
+      internalID: -1795381233452579431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_5
+      rect:
+        serializedVersion: 2
+        x: 1428
+        y: 807
+        width: 246
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c9547442786384d0800000000000000
+      internalID: -3133546075735696951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_6
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 837
+        width: 223
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2eb667d09800a670800000000000000
+      internalID: 8547841510931349034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_7
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 827
+        width: 188
+        height: 430
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5287d2f0ce92c7d0800000000000000
+      internalID: -2899580658528058790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_8
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 737
+        width: 272
+        height: 457
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14882484e2d819e90800000000000000
+      internalID: -7020675114173560767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_9
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 790
+        width: 243
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb9b4d1b3fbc0210800000000000000
+      internalID: 1300624653018700724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_10
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 338
+        width: 261
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7ebbd539392bcd0800000000000000
+      internalID: -2543808578368837673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_11
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 409
+        width: 176
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45a3f74cbfc19af0800000000000000
+      internalID: -391303285036571315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_12
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 415
+        width: 120
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac43989790893c70800000000000000
+      internalID: 8951327122963778725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_13
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 521
+        width: 89
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6248a6d660ed6e0800000000000000
+      internalID: -1811002933148113155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_14
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 550
+        width: 95
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c14edaa27cd97d70800000000000000
+      internalID: 9041500111974056391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_15
+      rect:
+        serializedVersion: 2
+        x: 2866
+        y: 556
+        width: 117
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878480219b4853cd0800000000000000
+      internalID: -2579009281193392008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_16
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 290
+        width: 310
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7add581c9d76060800000000000000
+      internalID: 6946760375440091084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_17
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 377
+        width: 201
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fbfef75e6a77940800000000000000
+      internalID: 5293883391621447508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_18
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 243
+        width: 342
+        height: 459
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ca07849b6644600800000000000000
+      internalID: 451598808614218848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_19
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 231
+        width: 303
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba9630706ed92b00800000000000000
+      internalID: 804418514243197623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_20
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 417
+        width: 43
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693f80006fc591790800000000000000
+      internalID: -7558908287932370026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_21
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 421
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dfb1e46b89c466b0800000000000000
+      internalID: -5303892860605448232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_22
+      rect:
+        serializedVersion: 2
+        x: 3001
+        y: 425
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963adf987185aece0800000000000000
+      internalID: -1375189878085672087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grafitis-09_23
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 338
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff355cc12128ca180800000000000000
+      internalID: -9102757732518898689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      grafitis-09_0: -7008038831203253337
+      grafitis-09_1: 8618232532280703997
+      grafitis-09_10: -2543808578368837673
+      grafitis-09_11: -391303285036571315
+      grafitis-09_12: 8951327122963778725
+      grafitis-09_13: -1811002933148113155
+      grafitis-09_14: 9041500111974056391
+      grafitis-09_15: -2579009281193392008
+      grafitis-09_16: 6946760375440091084
+      grafitis-09_17: 5293883391621447508
+      grafitis-09_18: 451598808614218848
+      grafitis-09_19: 804418514243197623
+      grafitis-09_2: 3556362852914760660
+      grafitis-09_20: -7558908287932370026
+      grafitis-09_21: -5303892860605448232
+      grafitis-09_22: -1375189878085672087
+      grafitis-09_23: -9102757732518898689
+      grafitis-09_3: -2269377066482704718
+      grafitis-09_4: -1795381233452579431
+      grafitis-09_5: -3133546075735696951
+      grafitis-09_6: 8547841510931349034
+      grafitis-09_7: -2899580658528058790
+      grafitis-09_8: -7020675114173560767
+      grafitis-09_9: 1300624653018700724
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
