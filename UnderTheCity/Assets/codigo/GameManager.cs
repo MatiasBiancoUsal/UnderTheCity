@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     [Header("cantidadEstrellas")]
     public int cantidadEstrellas;
 
+    [Header("reinicio")]
+    public int reinicio;
+
 
     private bool yaCargo = false;
 
@@ -51,6 +54,10 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            int reinicio = PlayerPrefs.GetInt("R", 0);
+            PlayerPrefs.SetInt("R", reinicio + 1);
+
         }
     }
 
@@ -102,8 +109,13 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.GetInt("MV", 0)+ PlayerPrefs.GetInt("MR", 0),
                 PlayerPrefs.GetInt("MV", 0),
                 PlayerPrefs.GetInt("MR", 0),
-                cantidadEstrellas);
-            
+                cantidadEstrellas,
+                PlayerPrefs.GetInt("R", 0));
+            PlayerPrefs.SetInt("MR", 0);
+            PlayerPrefs.SetInt("MV", 0);
+            PlayerPrefs.SetInt("R", 0);
+
+
         }
         else
         {

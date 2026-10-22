@@ -1367,7 +1367,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.76008725, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -1377,7 +1377,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.1014238, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &148569558
 BoxCollider2D:
@@ -5332,7 +5332,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.8557613, y: -0.23193526}
+  m_Offset: {x: 0.8557613, y: -0.25711566}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5342,7 +5342,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4184775, y: 0.13883352}
+  m_Size: {x: 1.4184775, y: 0.088472724}
   m_EdgeRadius: 0
 --- !u!61 &455133714
 BoxCollider2D:
@@ -6354,7 +6354,7 @@ Transform:
   m_GameObject: {fileID: 562279069}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.27, y: -50.15, z: 0}
+  m_LocalPosition: {x: 9.27, y: -50.46, z: 0}
   m_LocalScale: {x: 2.35, y: 2.35, z: 2.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10485,7 +10485,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.7612589, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -10495,7 +10495,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.09908044, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &1087473113
 BoxCollider2D:
@@ -11083,7 +11083,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.7612589, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -11093,7 +11093,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.09908044, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &1144871340
 BoxCollider2D:
@@ -12056,7 +12056,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0}
+  m_Offset: {x: -0.74401784, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -12066,7 +12066,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206007, y: 4.33}
+  m_Size: {x: 0.13356256, y: 4.33}
   m_EdgeRadius: 0
 --- !u!61 &1167278249
 BoxCollider2D:
@@ -19297,7 +19297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel13
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
@@ -19305,6 +19305,7 @@ MonoBehaviour:
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
   cantidadEstrellas: 0
+  reinicio: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0

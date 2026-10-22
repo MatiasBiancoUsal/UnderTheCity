@@ -95,7 +95,9 @@ public class AnalyticsManager : MonoBehaviour
         int muertes,
         int muertesVagabundo,
         int muertesRata,
-        int puntaje)
+        int puntaje,
+        int reinicio)
+     
     {
         if (!await VerificarServicios())
             return;
@@ -107,7 +109,8 @@ public class AnalyticsManager : MonoBehaviour
             { "muertes", muertes },
             { "muertesVagabundo", muertesVagabundo },
             { "muertesRata", muertesRata },
-            { "puntaje", puntaje }
+            { "puntaje", puntaje },
+            { "reinicio",reinicio }
         };
 
         AnalyticsService.Instance.RecordEvent(evento);
@@ -119,6 +122,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Evento NivelCompletado. MatarRata: " + muertesRata);
         Debug.Log("Evento NivelCompletado. MatarVagabundo+MatarRata: " + muertes);
         Debug.Log("Evento NivelCompletado. cantidadEstrellas: " + puntaje);
+        Debug.Log("Evento NivelCompletado. reinicio: " + reinicio);
 
     }
 

@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854199d1d7db758498a47b8a919f5501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paredes
-  alturaSubida: 10
+  alturaSubida: 10.5
   velocidad: 2
 --- !u!1 &301987315
 GameObject:
@@ -4057,7 +4057,7 @@ Transform:
   m_GameObject: {fileID: 410678633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.42, y: 27.64, z: 0}
+  m_LocalPosition: {x: 49.0007, y: 27.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4097,17 +4097,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.03377354, y: 0}
+  m_Offset: {x: -0.013069153, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.1, y: 0, z: 0.10666667, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 4.26, y: 0.52}
-    newSize: {x: 5.514091, y: 0.52}
+    newSize: {x: 4.675548, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.543398, y: 0.52}
+  m_Size: {x: 4.673786, y: 0.52}
   m_EdgeRadius: 0
 --- !u!212 &410678636
 SpriteRenderer:
@@ -4163,7 +4163,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 5.514091, y: 0.52}
+  m_Size: {x: 4.675548, y: 0.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16745,11 +16745,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.64
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.97
+      value: 14.26
       objectReference: {fileID: 0}
     - target: {fileID: 4865367802146201461, guid: 4b8b29517a5ffd040a1d778e2c1af249, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16964,7 +16964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel15
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
@@ -16972,6 +16972,7 @@ MonoBehaviour:
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
   cantidadEstrellas: 0
+  reinicio: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0

@@ -4515,11 +4515,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.32
+      value: -23.23
       objectReference: {fileID: 0}
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.27
+      value: -8.82
       objectReference: {fileID: 0}
     - target: {fileID: 7581608940856034460, guid: 9c8eb5a421019904f8dce9bb288af33d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7857,7 +7857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &611994541
 Transform:
   m_ObjectHideFlags: 0
@@ -12278,7 +12278,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.7247691, y: 0.39480895}
+  m_Offset: {x: -0.7247691, y: 1.1380373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0.94, z: 0, w: 0.82}
     pivot: {x: 0.5, y: 0.5}
@@ -12288,7 +12288,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17206001, y: 3.540382}
+  m_Size: {x: 0.17206001, y: 5.0268393}
   m_EdgeRadius: 0
 --- !u!61 &1109763770
 BoxCollider2D:
@@ -17077,7 +17077,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.12796474, y: 1.2196605}
+  m_Offset: {x: 0.12796474, y: 1.2715762}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17087,7 +17087,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.8740706, y: 0.16282701}
+  m_Size: {x: 2.8740706, y: 0.058995724}
   m_EdgeRadius: 0
 --- !u!61 &1365622449
 BoxCollider2D:
@@ -17169,7 +17169,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.2116632, y: -0.13196325}
+  m_Offset: {x: -1.2116632, y: 1.245868}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17179,7 +17179,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17882347, y: 2.8660736}
+  m_Size: {x: 0.17882347, y: 0.11041129}
   m_EdgeRadius: 0
 --- !u!212 &1365622451
 SpriteRenderer:
@@ -21950,7 +21950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   vagabundoListo: 0
   rataLista: 0
-  siguienteNivel: menu
+  siguienteNivel: Nivel14
   cervezas: 0
   cervezasNecesarias: 3
   quesos: 0
@@ -21958,6 +21958,7 @@ MonoBehaviour:
   tiempoTranscurrido: 0
   textoTiempo: {fileID: 1410860793}
   cantidadEstrellas: 0
+  reinicio: 0
 --- !u!4 &1870665317
 Transform:
   m_ObjectHideFlags: 0
@@ -23889,7 +23890,7 @@ GameObject:
   - component: {fileID: 2071543230}
   m_Layer: 0
   m_Name: policia_0
-  m_TagString: Untagged
+  m_TagString: "Polic\xEDa"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
